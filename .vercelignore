@@ -1,0 +1,22 @@
+# Deploy only the static dashboard shell and prebuilt JSON asset.
+# Keep analysis code/data in GitHub, but do not upload it to Vercel where Python autodetection can break static deploys.
+.git/
+.vercel/
+__pycache__/
+*.pyc
+.env
+
+# Local / generated / heavy data
+data/raw/
+data/processed/
+data/marts/
+models/
+
+# Portfolio source artifacts not required at runtime
+scripts/
+notebooks/
+docs/
+release/
+*.md
+BLUEPRINT.md
+RELEASE_NOTES.md
