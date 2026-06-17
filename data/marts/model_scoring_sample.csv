@@ -1,0 +1,501 @@
+order_id,shipping_mode,market,order_region,order_country,category_name,customer_segment,sales,late_delivery_risk,delivery_risk_probability,risk_level
+20253,First Class,Europe,Southern Europe,España,Electronics,Corporate,44.99000168,1,0.8257631841650963,High
+67268,First Class,Europe,Southern Europe,Italia,Cleats,Consumer,299.9500122,1,0.8207707977956135,High
+48189,First Class,Africa,Southern Africa,SudAfrica,Cardio Equipment,Consumer,199.9799957,1,0.8162829870398343,High
+65957,First Class,Europe,Southern Europe,España,Cleats,Consumer,179.9700012,1,0.8161763272531297,High
+19607,First Class,Europe,Southern Europe,Italia,Electronics,Consumer,159.9499969,1,0.815367617182058,High
+26926,First Class,Pacific Asia,Southeast Asia,Indonesia,Men's Footwear,Corporate,129.9900055,1,0.8141488986609022,High
+58449,First Class,LATAM,Central America,México,Men's Footwear,Consumer,129.9900055,1,0.8125736373037663,High
+26217,First Class,Pacific Asia,Eastern Asia,Japón,Camping & Hiking,Consumer,299.980011,1,0.8114169162516285,High
+32648,First Class,USCA,South of  USA,Estados Unidos,Water Sports,Consumer,199.9900055,1,0.8107371205570448,High
+53951,First Class,LATAM,Central America,Nicaragua,Cleats,Home Office,59.99000168,1,0.8085902042598659,High
+51514,First Class,LATAM,Central America,México,Fishing,Consumer,399.980011,1,0.8080682127762739,High
+8032,First Class,LATAM,Central America,México,Cardio Equipment,Consumer,199.9799957,1,0.8079581955399112,High
+51253,First Class,Pacific Asia,West Asia,Arabia Saudí,Men's Footwear,Corporate,129.9900055,1,0.8077653213337588,High
+47243,First Class,Africa,East Africa,Zambia,Cleats,Consumer,299.9500122,1,0.8077326500349652,High
+47923,First Class,Africa,Central Africa,Angola,Men's Footwear,Consumer,129.9900055,1,0.8072992492339928,High
+45633,First Class,Europe,Eastern Europe,Ucrania,Camping & Hiking,Corporate,299.980011,1,0.8066155289820395,High
+44091,First Class,Africa,East Africa,Mozambique,Shop By Sport,Corporate,79.98000336,1,0.8062922275690635,High
+36623,First Class,USCA,East of USA,Estados Unidos,Women's Apparel,Corporate,150.0,1,0.8062730132301473,High
+52441,First Class,LATAM,Caribbean,República Dominicana,Electronics,Consumer,103.9800034,1,0.8059042661377603,High
+45141,First Class,Pacific Asia,South Asia,Irán,Cardio Equipment,Consumer,60.0,1,0.8056442849639543,High
+57490,First Class,LATAM,Central America,México,Indoor/Outdoor Games,Corporate,149.9400024,1,0.8048373625152637,High
+69440,First Class,Europe,Western Europe,Francia,Cameras,Corporate,452.0400085,1,0.8047831047193472,High
+49048,First Class,Africa,Central Africa,Angola,Men's Footwear,Consumer,129.9900055,1,0.8046635875697431,High
+6444,First Class,LATAM,Central America,México,Fishing,Corporate,399.980011,1,0.8041476944429945,High
+54909,First Class,LATAM,Central America,Guatemala,Indoor/Outdoor Games,Home Office,149.9400024,1,0.8038880687422761,High
+39975,First Class,USCA,US Center,Estados Unidos,Men's Footwear,Consumer,129.9900055,1,0.8035462667007287,High
+42504,First Class,Europe,Eastern Europe,Ucrania,Cleats,Corporate,59.99000168,1,0.8031211519161106,High
+64681,First Class,Europe,Western Europe,Alemania,Camping & Hiking,Consumer,299.980011,1,0.8025631102995056,High
+4225,First Class,LATAM,Central America,México,Fishing,Home Office,399.980011,1,0.8021663018930253,High
+68320,First Class,Europe,Western Europe,Alemania,Cleats,Home Office,119.9800034,1,0.8014739345414309,High
+60054,First Class,LATAM,Central America,El Salvador,Cardio Equipment,Consumer,99.98999786,1,0.8005307329258564,High
+57316,First Class,LATAM,Caribbean,República Dominicana,Cardio Equipment,Consumer,199.9799957,1,0.7999763116992772,High
+13205,First Class,Europe,Northern Europe,Reino Unido,Water Sports,Consumer,199.9900055,1,0.7998356600092865,High
+17711,First Class,Europe,Western Europe,Francia,Indoor/Outdoor Games,Corporate,249.8999939,1,0.7991725389449336,High
+25489,First Class,Pacific Asia,South Asia,India,Women's Apparel,Corporate,150.0,1,0.7986242263220164,High
+5505,First Class,LATAM,South America,Brasil,Shop By Sport,Consumer,119.9700012,1,0.7985405079440758,High
+52680,First Class,LATAM,Central America,Nicaragua,Water Sports,Home Office,199.9900055,1,0.7981954473065177,High
+5054,First Class,LATAM,Central America,El Salvador,Women's Apparel,Corporate,250.0,1,0.7980076668821441,High
+56806,First Class,LATAM,South America,Brasil,Cardio Equipment,Corporate,99.98999786,1,0.7976606972914598,High
+54771,First Class,LATAM,Caribbean,República Dominicana,Cleats,Corporate,239.9600067,1,0.7974983065462702,High
+17649,First Class,Europe,Western Europe,Francia,Water Sports,Consumer,199.9900055,1,0.796849909058278,High
+55101,First Class,LATAM,South America,Brasil,Golf Gloves,Consumer,29.96999931,1,0.7965655879289789,High
+30061,First Class,Pacific Asia,Oceania,Australia,Water Sports,Consumer,199.9900055,1,0.7964639589461219,High
+65817,First Class,Europe,Western Europe,Francia,Water Sports,Home Office,199.9900055,1,0.7961616922637084,High
+23761,First Class,Pacific Asia,Southeast Asia,Filipinas,Cardio Equipment,Consumer,299.9700012,1,0.7960198672765885,High
+40932,First Class,USCA,East of USA,Estados Unidos,Women's Apparel,Consumer,200.0,1,0.7949425435917534,High
+26204,First Class,Pacific Asia,Oceania,Australia,Water Sports,Home Office,199.9900055,1,0.7946246319207652,High
+23434,First Class,Pacific Asia,Oceania,Australia,Men's Footwear,Consumer,129.9900055,1,0.7942932744403357,High
+56451,First Class,LATAM,South America,Brasil,Cleats,Consumer,299.9500122,1,0.7908069598201481,High
+21419,First Class,Pacific Asia,South Asia,India,Women's Apparel,Corporate,250.0,1,0.7907564661848717,High
+16672,First Class,Europe,Western Europe,Francia,Cardio Equipment,Consumer,299.9700012,1,0.7869899783214322,High
+19033,First Class,Europe,Western Europe,Alemania,Water Sports,Consumer,199.9900055,1,0.7866264880401018,High
+24459,First Class,Pacific Asia,Oceania,Australia,Men's Footwear,Consumer,129.9900055,1,0.7839912648081527,High
+56817,First Class,LATAM,South America,Venezuela,Fishing,Home Office,399.980011,1,0.7798386915337505,High
+48694,First Class,Pacific Asia,West Asia,Irak,Girls' Apparel,Corporate,39.99000168,1,0.7724471155071185,High
+45606,First Class,Africa,West Africa,Nigeria,Women's Apparel,Corporate,200.0,1,0.7269562888891529,High
+6646,First Class,LATAM,South America,Perú,Water Sports,Home Office,199.9900055,1,0.724198768384947,High
+40870,First Class,USCA,East of USA,Estados Unidos,Cleats,Home Office,239.9600067,1,0.7241844342837476,High
+55325,First Class,LATAM,South America,Brasil,Fishing,Consumer,399.980011,1,0.7240986474008596,High
+25102,First Class,Pacific Asia,South Asia,India,Cleats,Home Office,299.9500122,1,0.7240272677152633,High
+46621,First Class,Africa,East Africa,Tanzania,Men's Footwear,Home Office,129.9900055,1,0.7229432685173992,High
+8245,First Class,LATAM,Central America,México,Women's Apparel,Corporate,150.0,1,0.7224022868323837,High
+58637,First Class,LATAM,Caribbean,República Dominicana,Fishing,Consumer,399.980011,1,0.7221377134180127,High
+7964,Second Class,LATAM,Central America,México,Fishing,Consumer,399.980011,1,0.718938422769258,High
+55958,First Class,LATAM,Central America,México,Cardio Equipment,Home Office,499.9500122,1,0.717487977085414,High
+8337,First Class,LATAM,Central America,Guatemala,Trade-In,Consumer,87.95999908,1,0.7167756936078883,High
+25508,First Class,Pacific Asia,South Asia,India,Golf Balls,Consumer,79.95999908,1,0.7161856347727188,High
+26014,First Class,Pacific Asia,South Asia,India,Indoor/Outdoor Games,Corporate,99.95999908,0,0.7146583571864007,High
+53889,First Class,LATAM,Central America,Panamá,Fishing,Consumer,399.980011,1,0.7102155636715668,High
+15246,First Class,Europe,Western Europe,Francia,Indoor/Outdoor Games,Consumer,99.95999908,1,0.7099625847475352,High
+44915,First Class,Europe,Eastern Europe,Bielorrusia,Men's Footwear,Consumer,129.9900055,1,0.7093936764251559,High
+53418,First Class,LATAM,Central America,Nicaragua,Men's Footwear,Consumer,129.9900055,0,0.7091456704925155,High
+55789,Second Class,LATAM,Caribbean,Martinica,Women's Apparel,Corporate,100.0,1,0.7084332990690858,High
+31265,First Class,Pacific Asia,Oceania,Australia,Cleats,Home Office,179.9700012,1,0.7072530566372754,High
+34250,First Class,USCA,West of USA,Estados Unidos,Water Sports,Consumer,199.9900055,1,0.7056827079782099,High
+21579,Second Class,Pacific Asia,South Asia,India,Women's Apparel,Consumer,100.0,1,0.7040548371594426,High
+64897,First Class,Europe,Western Europe,Alemania,Men's Footwear,Corporate,129.9900055,1,0.7028894886610069,High
+75493,Second Class,Pacific Asia,South Asia,India,Pet Supplies,Home Office,84.40000153,1,0.7025431785586289,High
+26652,Second Class,Pacific Asia,Eastern Asia,China,Water Sports,Consumer,199.9900055,1,0.7012464452278445,High
+23077,Second Class,Pacific Asia,Eastern Asia,China,Shop By Sport,Home Office,119.9700012,1,0.7005810585500968,High
+75635,Second Class,Pacific Asia,South Asia,Pakistán,Pet Supplies,Consumer,84.40000153,1,0.7004922709340768,High
+56095,Second Class,LATAM,Central America,México,Golf Gloves,Consumer,49.95000076,1,0.7004578092031924,High
+53992,Second Class,LATAM,Central America,Honduras,Women's Apparel,Home Office,150.0,1,0.7001161273584189,High
+17106,Second Class,Europe,Southern Europe,España,Shop By Sport,Home Office,79.98000336,0,0.698799007728395,Medium
+25032,Second Class,Pacific Asia,Southeast Asia,Vietnam,Camping & Hiking,Consumer,299.980011,1,0.6985861647025815,Medium
+68571,First Class,Europe,Western Europe,Francia,Cleats,Consumer,239.9600067,0,0.6985241021465776,Medium
+8163,Second Class,LATAM,South America,Perú,Camping & Hiking,Home Office,299.980011,1,0.6975514048827739,Medium
+21468,Second Class,Pacific Asia,South Asia,India,Men's Footwear,Consumer,129.9900055,1,0.697093156893262,Medium
+19912,First Class,Europe,Western Europe,Alemania,Water Sports,Consumer,199.9900055,1,0.6968930820003504,Medium
+27011,Second Class,Pacific Asia,Southeast Asia,Camboya,Camping & Hiking,Home Office,299.980011,0,0.6959376838949767,Medium
+7078,Second Class,LATAM,Central America,Guatemala,Women's Apparel,Home Office,250.0,1,0.695337676383511,Medium
+74501,Second Class,Pacific Asia,Southeast Asia,Vietnam,Computers,Home Office,1500.0,0,0.6951137392390768,Medium
+35125,Second Class,USCA,US Center,Estados Unidos,Indoor/Outdoor Games,Corporate,199.9199982,1,0.6946840771917765,Medium
+44359,Second Class,Pacific Asia,West Asia,Turquía,Indoor/Outdoor Games,Corporate,99.95999908,1,0.6944867757723419,Medium
+59051,Second Class,LATAM,South America,Ecuador,Men's Footwear,Consumer,129.9900055,0,0.6941658843926383,Medium
+65064,Second Class,Europe,Western Europe,Francia,Boxing & MMA,Consumer,379.9599915,1,0.6937128797635627,Medium
+71351,Second Class,Europe,Western Europe,Francia,Crafts,Consumer,461.480011,0,0.6931172593657906,Medium
+11073,Second Class,Europe,Southern Europe,España,Camping & Hiking,Consumer,299.980011,1,0.692616399631721,Medium
+59147,Second Class,LATAM,Central America,México,Cleats,Corporate,299.9500122,1,0.6925855276707666,Medium
+50622,Second Class,Europe,Eastern Europe,Rusia,Women's Apparel,Home Office,50.0,1,0.6922438883987143,Medium
+47987,Second Class,Pacific Asia,South Asia,Irán,Indoor/Outdoor Games,Consumer,49.97999954,1,0.6921768825688793,Medium
+52585,Second Class,LATAM,Central America,México,Indoor/Outdoor Games,Home Office,149.9400024,1,0.6919785489350581,Medium
+66289,Second Class,Europe,Northern Europe,Reino Unido,Fishing,Consumer,399.980011,1,0.6918312456110478,Medium
+23883,First Class,Pacific Asia,Oceania,Australia,Indoor/Outdoor Games,Consumer,149.9400024,0,0.6912626738544229,Medium
+28613,Second Class,Pacific Asia,Oceania,Australia,Men's Footwear,Consumer,129.9900055,1,0.6906249468965658,Medium
+30075,Second Class,Pacific Asia,Eastern Asia,China,Men's Footwear,Consumer,129.9900055,1,0.6901519563778148,Medium
+27667,Second Class,Pacific Asia,Eastern Asia,Japón,Cleats,Home Office,119.9800034,1,0.6893325112856739,Medium
+67750,Second Class,Europe,Northern Europe,Finlandia,Cleats,Consumer,239.9600067,1,0.6887206470549501,Medium
+6562,Second Class,LATAM,Central America,Panamá,Cleats,Corporate,239.9600067,1,0.6886536146784713,Medium
+58832,Second Class,LATAM,Caribbean,Trinidad y Tobago,Women's Apparel,Consumer,50.0,1,0.6884897036422778,Medium
+64135,Second Class,Europe,Southern Europe,España,Cardio Equipment,Corporate,399.9599915,1,0.6884552294590218,Medium
+74999,Second Class,Pacific Asia,Southeast Asia,Indonesia,DVDs,Consumer,164.3800049,1,0.6882921781224859,Medium
+61965,Second Class,Europe,Southern Europe,España,Indoor/Outdoor Games,Home Office,99.95999908,1,0.6882680957882616,Medium
+74458,Second Class,Pacific Asia,Southeast Asia,Filipinas,Children's Clothing,Consumer,357.1000061,1,0.6877463192608387,Medium
+36244,Second Class,USCA,West of USA,Estados Unidos,Indoor/Outdoor Games,Home Office,99.95999908,1,0.6876116059807619,Medium
+3232,Second Class,LATAM,Central America,México,Women's Apparel,Consumer,150.0,1,0.6868981500923343,Medium
+22524,Second Class,Pacific Asia,Eastern Asia,China,Water Sports,Home Office,199.9900055,1,0.6868751932360583,Medium
+17244,Second Class,Europe,Western Europe,Francia,Cleats,Corporate,59.99000168,1,0.6868524157543782,Medium
+13314,Second Class,Europe,Southern Europe,Italia,Fishing,Corporate,399.980011,1,0.6868225630830572,Medium
+11269,Second Class,Europe,Western Europe,Francia,Water Sports,Home Office,199.9900055,1,0.6862808903459983,Medium
+37028,Second Class,USCA,US Center,Estados Unidos,Shop By Sport,Corporate,119.9700012,1,0.6861134916334061,Medium
+49655,Second Class,Africa,Southern Africa,SudAfrica,Women's Apparel,Consumer,150.0,1,0.685517087049028,Medium
+11484,Second Class,Europe,Western Europe,Francia,Camping & Hiking,Consumer,299.980011,1,0.6855090086799775,Medium
+39060,Second Class,USCA,South of  USA,Estados Unidos,Camping & Hiking,Consumer,299.980011,1,0.6847945685859395,Medium
+50129,Second Class,Africa,West Africa,Nigeria,Cardio Equipment,Consumer,199.9799957,1,0.6839984100246566,Medium
+52659,Second Class,LATAM,Central America,Honduras,Cleats,Consumer,179.9700012,1,0.6836781435822521,Medium
+30759,Second Class,Pacific Asia,Oceania,Australia,Camping & Hiking,Home Office,299.980011,1,0.6833822373107429,Medium
+66027,Second Class,Europe,Western Europe,Países Bajos,Men's Footwear,Corporate,129.9900055,1,0.6833442579076194,Medium
+17768,Second Class,Europe,Western Europe,Francia,Camping & Hiking,Consumer,299.980011,1,0.6831572383839462,Medium
+42128,Second Class,Africa,West Africa,Nigeria,Cardio Equipment,Corporate,399.9599915,1,0.6828255210206549,Medium
+14538,Second Class,Europe,Northern Europe,Reino Unido,Cleats,Corporate,179.9700012,1,0.6823617742643392,Medium
+3876,Second Class,LATAM,Central America,Honduras,Fishing,Consumer,399.980011,0,0.681308066522451,Medium
+18111,Second Class,Europe,Western Europe,Países Bajos,Indoor/Outdoor Games,Corporate,149.9400024,0,0.6812873465165572,Medium
+48141,Second Class,Europe,Eastern Europe,Polonia,Indoor/Outdoor Games,Consumer,49.97999954,0,0.6809022737268086,Medium
+9590,Second Class,LATAM,South America,Brasil,Water Sports,Consumer,199.9900055,1,0.6807194471109954,Medium
+31113,Second Class,Pacific Asia,Oceania,Nueva Zelanda,Cardio Equipment,Consumer,499.9500122,1,0.680427373941309,Medium
+68268,Second Class,Europe,Southern Europe,Italia,Women's Apparel,Corporate,250.0,1,0.6798488000913719,Medium
+50056,Second Class,Africa,West Africa,Costa de Marfil,Men's Footwear,Consumer,129.9900055,0,0.6784824419878466,Medium
+19088,Second Class,Europe,Western Europe,Francia,Indoor/Outdoor Games,Consumer,149.9400024,1,0.6760680302861907,Medium
+64136,Second Class,Europe,Southern Europe,Italia,Fishing,Consumer,399.980011,0,0.6744116144256219,Medium
+25869,Second Class,Pacific Asia,Eastern Asia,China,Camping & Hiking,Consumer,299.980011,1,0.6742876012820741,Medium
+25671,Second Class,Pacific Asia,Oceania,Australia,Women's Apparel,Consumer,50.0,0,0.6740003509418703,Medium
+62061,Second Class,Europe,Western Europe,Francia,Women's Apparel,Corporate,200.0,0,0.669564711327675,Medium
+21247,Second Class,Pacific Asia,Oceania,Australia,Water Sports,Home Office,199.9900055,1,0.6691632019230702,Medium
+55246,Second Class,LATAM,Central America,Nicaragua,Camping & Hiking,Corporate,299.980011,0,0.6666634555947197,Medium
+33214,Second Class,USCA,East of USA,Estados Unidos,Indoor/Outdoor Games,Consumer,99.95999908,1,0.6652601061315725,Medium
+32597,Second Class,USCA,South of  USA,Estados Unidos,Women's Apparel,Corporate,50.0,1,0.6490251508346864,Medium
+12632,Second Class,Europe,Western Europe,Alemania,Camping & Hiking,Corporate,299.980011,1,0.6436232889893556,Medium
+32794,Second Class,USCA,US Center,Estados Unidos,Women's Apparel,Consumer,50.0,1,0.6427770203869506,Medium
+15068,Second Class,Europe,Western Europe,Alemania,Women's Apparel,Consumer,100.0,1,0.6424685997781427,Medium
+35871,Second Class,USCA,US Center,Estados Unidos,Camping & Hiking,Consumer,299.980011,0,0.641902044862434,Medium
+26335,Second Class,Pacific Asia,Southeast Asia,Tailandia,Indoor/Outdoor Games,Consumer,99.95999908,1,0.6397509762459574,Medium
+9941,Second Class,LATAM,Central America,Panamá,Cleats,Consumer,59.99000168,0,0.6393516476204615,Medium
+58612,Second Class,LATAM,Central America,Honduras,Men's Footwear,Corporate,129.9900055,1,0.6391748608475155,Medium
+33655,Second Class,USCA,East of USA,Estados Unidos,Cleats,Consumer,119.9800034,1,0.6389684177774868,Medium
+6235,Second Class,LATAM,Central America,Panamá,Fishing,Corporate,399.980011,1,0.6385268395336005,Medium
+22648,Second Class,Pacific Asia,Oceania,Australia,Accessories,Consumer,24.98999977,1,0.6370580725576658,Medium
+32289,Second Class,USCA,West of USA,Estados Unidos,Water Sports,Consumer,199.9900055,1,0.6361902978651449,Medium
+34538,Second Class,USCA,South of  USA,Estados Unidos,Fishing,Corporate,399.980011,1,0.6356415389368125,Medium
+63828,Second Class,Europe,Western Europe,Alemania,Women's Apparel,Corporate,100.0,1,0.6352736538568264,Medium
+53261,Second Class,LATAM,South America,Brasil,Girls' Apparel,Consumer,90.0,0,0.6283669564064331,Medium
+66840,Second Class,Europe,Western Europe,Alemania,Camping & Hiking,Corporate,299.980011,1,0.6237414415994268,Medium
+67195,Second Class,Europe,Western Europe,Suiza,Women's Apparel,Consumer,250.0,1,0.6232741494132025,Medium
+43320,Second Class,Africa,North Africa,Marruecos,Women's Apparel,Consumer,200.0,1,0.6223512185940671,Medium
+53661,Second Class,LATAM,Central America,México,Cardio Equipment,Consumer,199.9799957,0,0.6170598192468162,Medium
+37865,Second Class,USCA,US Center,Estados Unidos,Women's Apparel,Home Office,100.0,1,0.616862292473649,Medium
+19727,Second Class,Europe,Western Europe,Francia,Men's Footwear,Consumer,129.9900055,1,0.6161021623707146,Medium
+64621,Second Class,Europe,Western Europe,Alemania,Men's Footwear,Consumer,129.9900055,0,0.615480651798794,Medium
+19731,Same Day,Europe,Southern Europe,España,Women's Apparel,Corporate,150.0,0,0.549215332086905,Medium
+7279,Same Day,LATAM,Caribbean,Martinica,Accessories,Home Office,49.97999954,0,0.5471064927399598,Medium
+2960,Same Day,LATAM,Central America,México,Lacrosse,Corporate,49.97999954,0,0.5416538420318329,Medium
+9664,Same Day,LATAM,Central America,México,Water Sports,Consumer,199.9900055,0,0.540610820209248,Medium
+63979,Same Day,Europe,Northern Europe,Reino Unido,Fishing,Corporate,399.980011,1,0.5405598180503456,Medium
+12010,Same Day,Europe,Western Europe,Francia,Water Sports,Consumer,199.9900055,0,0.5395140119761129,Medium
+6826,Same Day,LATAM,Central America,Nicaragua,Cleats,Consumer,239.9600067,1,0.5382646484269771,Medium
+34001,Same Day,USCA,East of USA,Estados Unidos,Electronics,Home Office,127.9599991,0,0.5380588325440304,Medium
+815,Same Day,LATAM,South America,Venezuela,Cleats,Consumer,299.9500122,1,0.5375780066621033,Medium
+61067,Same Day,LATAM,Central America,México,Fishing,Consumer,399.980011,0,0.5369058327458106,Medium
+23774,Same Day,Pacific Asia,Oceania,Australia,Cardio Equipment,Consumer,399.9599915,0,0.5289181833926091,Medium
+21900,Same Day,Pacific Asia,Southeast Asia,Myanmar (Birmania),Fishing,Consumer,399.980011,1,0.528426388177737,Medium
+54134,Same Day,LATAM,Caribbean,República Dominicana,Women's Apparel,Home Office,250.0,0,0.527809977696002,Medium
+12635,Same Day,Europe,Southern Europe,España,Cleats,Corporate,239.9600067,0,0.5264909246308083,Medium
+7645,Same Day,LATAM,South America,Chile,Camping & Hiking,Home Office,299.980011,1,0.526280677682443,Medium
+45154,Same Day,Pacific Asia,South Asia,Irán,Cleats,Consumer,239.9600067,0,0.5238706908396239,Medium
+39937,Same Day,USCA,US Center,Estados Unidos,Golf Balls,Corporate,14.98999977,1,0.5227074859606557,Medium
+31195,Same Day,Pacific Asia,Oceania,Nueva Zelanda,Indoor/Outdoor Games,Corporate,49.97999954,0,0.522028806916797,Medium
+2216,Same Day,LATAM,Central America,México,Indoor/Outdoor Games,Home Office,149.9400024,0,0.5215436034305706,Medium
+46095,Same Day,Pacific Asia,West Asia,Arabia Saudí,Women's Apparel,Consumer,200.0,1,0.5206514463467901,Medium
+41085,Same Day,USCA,US Center,Estados Unidos,Water Sports,Consumer,199.9900055,1,0.5189600240199902,Medium
+22073,Same Day,Pacific Asia,Southeast Asia,Indonesia,Cardio Equipment,Home Office,299.9700012,0,0.5169584079433064,Medium
+41189,Same Day,USCA,US Center,Estados Unidos,Women's Apparel,Corporate,50.0,0,0.5156456344041008,Medium
+42544,Same Day,Africa,Central Africa,República Democrática del Congo,Indoor/Outdoor Games,Consumer,199.9199982,0,0.5109994447713887,Medium
+25896,Same Day,Pacific Asia,Southeast Asia,Singapur,Indoor/Outdoor Games,Corporate,99.95999908,0,0.5055810822388768,Medium
+22816,Same Day,Pacific Asia,Oceania,Australia,Cardio Equipment,Corporate,299.9700012,0,0.5053483671396654,Medium
+44320,Same Day,Africa,West Africa,Nigeria,Cleats,Consumer,179.9700012,1,0.5043054801400598,Medium
+63985,Same Day,Europe,Western Europe,Francia,Fishing,Consumer,399.980011,0,0.4938418321870351,Medium
+39001,Same Day,USCA,US Center,Estados Unidos,Cleats,Consumer,179.9700012,0,0.49294719366001516,Medium
+11051,Same Day,Europe,Northern Europe,Reino Unido,Women's Apparel,Consumer,50.0,0,0.489407814763556,Medium
+61018,Same Day,LATAM,Central America,México,Men's Footwear,Consumer,129.9900055,1,0.47316279828755875,Medium
+1149,Standard Class,LATAM,Caribbean,República Dominicana,Shop By Sport,Corporate,199.9499969,1,0.4384998508660593,Medium
+72463,Standard Class,Pacific Asia,Oceania,Australia,Men's Clothing,Corporate,210.8500061,0,0.4218604450470854,Medium
+37374,Standard Class,USCA,East of USA,Estados Unidos,Fishing,Consumer,399.980011,1,0.41666710253209227,Medium
+10592,Standard Class,Europe,Western Europe,Alemania,Indoor/Outdoor Games,Consumer,249.8999939,0,0.4138889835445857,Medium
+61949,Standard Class,Europe,Western Europe,Alemania,Fishing,Corporate,399.980011,1,0.412042442083643,Medium
+25827,Standard Class,Pacific Asia,Southeast Asia,Myanmar (Birmania),Shop By Sport,Consumer,199.9499969,0,0.41151711809451635,Medium
+1210,Standard Class,LATAM,Central America,México,Shop By Sport,Home Office,159.9600067,1,0.4080805646989198,Medium
+58474,Standard Class,LATAM,Caribbean,República Dominicana,Men's Footwear,Home Office,129.9900055,1,0.4080532138828464,Medium
+15830,Standard Class,Europe,Western Europe,Austria,Water Sports,Consumer,199.9900055,1,0.40749882127366954,Medium
+25074,Standard Class,Pacific Asia,Oceania,Australia,Men's Footwear,Corporate,129.9900055,1,0.40722575291761576,Medium
+35755,Standard Class,USCA,West of USA,Estados Unidos,Women's Apparel,Consumer,50.0,1,0.40495870755797825,Medium
+12670,Standard Class,Europe,Western Europe,Alemania,Water Sports,Consumer,199.9900055,1,0.4042792276964183,Medium
+17008,Standard Class,Europe,Western Europe,Alemania,Camping & Hiking,Corporate,299.980011,0,0.40409021628661523,Medium
+41760,Standard Class,Europe,Western Europe,Austria,Women's Apparel,Consumer,50.0,1,0.40405625895665964,Medium
+17196,Standard Class,Europe,Western Europe,Alemania,Women's Apparel,Corporate,50.0,0,0.4039792341412901,Medium
+17406,Standard Class,Europe,Western Europe,Alemania,Camping & Hiking,Home Office,299.980011,0,0.4038911731529348,Medium
+18974,Standard Class,Europe,Western Europe,Alemania,Cleats,Home Office,119.9800034,1,0.40348256896013834,Medium
+68038,Standard Class,Europe,Western Europe,Francia,Shop By Sport,Consumer,39.99000168,0,0.403259929053516,Medium
+67363,Standard Class,Europe,Western Europe,Países Bajos,Fishing,Consumer,399.980011,0,0.4023686620510424,Medium
+13307,Standard Class,Europe,Western Europe,Francia,Girls' Apparel,Consumer,150.0,0,0.4022664485470397,Medium
+12655,Standard Class,Europe,Western Europe,Francia,Cardio Equipment,Home Office,99.98999786,1,0.40187116574259735,Medium
+46345,Standard Class,Africa,West Africa,Ghana,Accessories,Home Office,99.95999908,1,0.4007974517700504,Medium
+17321,Standard Class,Europe,Western Europe,Francia,Camping & Hiking,Consumer,299.980011,0,0.4005726947069285,Medium
+37907,Standard Class,USCA,West of USA,Estados Unidos,Trade-In,Home Office,87.95999908,0,0.4001602158599699,Medium
+41743,Standard Class,Pacific Asia,West Asia,Turquía,Water Sports,Corporate,199.9900055,0,0.4000407474663699,Medium
+29421,Standard Class,Pacific Asia,Eastern Asia,China,Men's Footwear,Consumer,129.9900055,0,0.3993630544840826,Low
+27502,Standard Class,Pacific Asia,Southeast Asia,Indonesia,Indoor/Outdoor Games,Consumer,249.8999939,0,0.39923153251211446,Low
+63647,Standard Class,Europe,Western Europe,Francia,Camping & Hiking,Consumer,299.980011,0,0.3991929767729799,Low
+17097,Standard Class,Europe,Western Europe,Bélgica,Women's Apparel,Corporate,200.0,0,0.3988578307999438,Low
+17321,Standard Class,Europe,Western Europe,Francia,Men's Footwear,Consumer,129.9900055,0,0.39872028559281775,Low
+69756,Standard Class,Europe,Western Europe,Francia,Cameras,Consumer,452.0400085,0,0.39854376870865454,Low
+63618,Standard Class,Europe,Western Europe,Francia,Indoor/Outdoor Games,Consumer,199.9199982,0,0.39794339881461266,Low
+30831,Standard Class,Pacific Asia,Oceania,Australia,Indoor/Outdoor Games,Corporate,49.97999954,0,0.3979425821516203,Low
+42736,Standard Class,Africa,Central Africa,República Centroafricana,Camping & Hiking,Corporate,299.980011,0,0.3979047189671367,Low
+15307,Standard Class,Europe,Western Europe,Alemania,Hockey,Consumer,88.0,0,0.3978565017899984,Low
+46591,Standard Class,Africa,North Africa,Egipto,Men's Footwear,Consumer,129.9900055,0,0.39774088902230786,Low
+48821,Standard Class,Africa,Central Africa,República Democrática del Congo,Men's Footwear,Corporate,129.9900055,0,0.39771610739288427,Low
+63513,Standard Class,Europe,Western Europe,Francia,Indoor/Outdoor Games,Corporate,99.95999908,0,0.39750721503972336,Low
+50558,Standard Class,Africa,Central Africa,República Democrática del Congo,Golf Apparel,Home Office,79.95999908,0,0.3972469422007486,Low
+41514,Standard Class,Pacific Asia,West Asia,Yemen,Indoor/Outdoor Games,Corporate,99.95999908,1,0.39701977518199916,Low
+13214,Standard Class,Europe,Western Europe,Alemania,Men's Footwear,Consumer,129.9900055,1,0.3966167812373374,Low
+69250,Standard Class,Europe,Southern Europe,Italia,Baby,Corporate,59.08000183,1,0.39660611204736607,Low
+67221,Standard Class,Europe,Western Europe,Francia,Water Sports,Corporate,199.9900055,0,0.3965922092729544,Low
+28856,Standard Class,Pacific Asia,Eastern Asia,Japón,Cardio Equipment,Consumer,99.98999786,0,0.3965016252941943,Low
+6925,Standard Class,LATAM,Central America,El Salvador,Indoor/Outdoor Games,Home Office,99.95999908,1,0.3963989170496266,Low
+73619,Standard Class,Pacific Asia,Southeast Asia,Indonesia,Video Games,Corporate,39.75,1,0.39598665577504677,Low
+66295,Standard Class,Europe,Southern Europe,Portugal,Women's Apparel,Home Office,200.0,1,0.3959805020972302,Low
+32393,Standard Class,USCA,South of  USA,Estados Unidos,Water Sports,Consumer,199.9900055,0,0.3959699931456784,Low
+18550,Standard Class,Europe,Western Europe,Francia,Trade-In,Consumer,31.97999954,1,0.3959310603249724,Low
+15816,Standard Class,Europe,Western Europe,Suiza,Women's Apparel,Consumer,150.0,0,0.39591384351155184,Low
+58957,Standard Class,LATAM,South America,Brasil,Cleats,Corporate,119.9800034,0,0.39565358634123476,Low
+442,Standard Class,LATAM,Central America,Nicaragua,Cardio Equipment,Consumer,399.9599915,0,0.39554078240138985,Low
+22336,Standard Class,Pacific Asia,Eastern Asia,China,Water Sports,Corporate,199.9900055,0,0.39536773767984296,Low
+49524,Standard Class,Africa,West Africa,Nigeria,Water Sports,Consumer,199.9900055,1,0.3951078326548688,Low
+45283,Standard Class,Pacific Asia,West Asia,Turquía,Women's Apparel,Consumer,200.0,0,0.3949585178925619,Low
+19259,Standard Class,Europe,Northern Europe,Irlanda,Indoor/Outdoor Games,Consumer,149.9400024,1,0.3948681756004334,Low
+16111,Standard Class,Europe,Western Europe,Francia,Shop By Sport,Home Office,120.0,0,0.39456233550305353,Low
+50074,Standard Class,Africa,West Africa,Nigeria,Men's Footwear,Home Office,129.9900055,1,0.3943937395892302,Low
+19871,Standard Class,Europe,Western Europe,Francia,Camping & Hiking,Corporate,299.980011,0,0.39413243077826016,Low
+41555,Standard Class,Pacific Asia,West Asia,Arabia Saudí,Indoor/Outdoor Games,Consumer,99.95999908,1,0.3938702802009804,Low
+42005,Standard Class,Pacific Asia,West Asia,Turquía,Cleats,Corporate,239.9600067,1,0.3937857012764079,Low
+47903,Standard Class,Africa,West Africa,Nigeria,Cleats,Consumer,299.9500122,0,0.3936930687143926,Low
+51519,Standard Class,LATAM,Central America,Nicaragua,Cardio Equipment,Corporate,499.9500122,1,0.39364001597702997,Low
+23769,Standard Class,Pacific Asia,South Asia,India,Fishing,Home Office,399.980011,1,0.3935157164675075,Low
+13430,Standard Class,Europe,Western Europe,Alemania,Cardio Equipment,Consumer,499.9500122,1,0.39347956964686576,Low
+49817,Standard Class,Africa,Central Africa,República Democrática del Congo,Cleats,Home Office,299.9500122,0,0.3933365265850822,Low
+35133,Standard Class,USCA,West of USA,Estados Unidos,Men's Footwear,Home Office,129.9900055,0,0.3931454909728603,Low
+10880,Standard Class,Europe,Western Europe,Francia,Water Sports,Consumer,199.9900055,1,0.393088208936463,Low
+16696,Standard Class,Europe,Northern Europe,Reino Unido,Golf Gloves,Corporate,24.98999977,0,0.3930197904529649,Low
+64391,Standard Class,Europe,Western Europe,Alemania,Cleats,Corporate,299.9500122,0,0.3929833291092157,Low
+36183,Standard Class,USCA,South of  USA,Estados Unidos,Water Sports,Consumer,199.9900055,0,0.39291724770410724,Low
+43481,Standard Class,Africa,Central Africa,República Democrática del Congo,Water Sports,Corporate,199.9900055,0,0.3928459230227415,Low
+35520,Standard Class,USCA,West of USA,Estados Unidos,Women's Apparel,Home Office,50.0,1,0.39282014244786007,Low
+42480,Standard Class,Pacific Asia,South Asia,Irán,Women's Apparel,Consumer,200.0,1,0.3927631038354419,Low
+39843,Standard Class,USCA,South of  USA,Estados Unidos,Shop By Sport,Corporate,199.9499969,0,0.39260874220880054,Low
+26369,Standard Class,Pacific Asia,South Asia,Bangladés,Men's Footwear,Corporate,129.9900055,1,0.39252584968059473,Low
+5824,Standard Class,LATAM,Central America,Guatemala,Cleats,Corporate,179.9700012,1,0.3924983135549357,Low
+42431,Standard Class,Europe,Eastern Europe,Rumania,Electronics,Consumer,31.98999977,0,0.3924948979161292,Low
+73173,Standard Class,Pacific Asia,South Asia,India,Sporting Goods,Corporate,327.75,0,0.39247582100458256,Low
+66653,Standard Class,Europe,Western Europe,Francia,Men's Footwear,Corporate,129.9900055,0,0.39227619978648687,Low
+31906,Standard Class,USCA,East of USA,Estados Unidos,Women's Apparel,Corporate,50.0,0,0.3921633074979398,Low
+48778,Standard Class,Pacific Asia,West Asia,Irak,Cleats,Home Office,179.9700012,0,0.392138289165853,Low
+21853,Standard Class,Pacific Asia,South Asia,India,Cardio Equipment,Corporate,99.98999786,0,0.3920604058370397,Low
+46305,Standard Class,Europe,Eastern Europe,Rusia,Shop By Sport,Consumer,159.9600067,1,0.3919833380814263,Low
+25555,Standard Class,Pacific Asia,Southeast Asia,Indonesia,Fishing,Consumer,399.980011,1,0.39194326084551356,Low
+34612,Standard Class,USCA,East of USA,Estados Unidos,Water Sports,Consumer,199.9900055,0,0.3918787622523839,Low
+48911,Standard Class,Africa,West Africa,Sierra Leona,Water Sports,Consumer,199.9900055,0,0.3918091107999112,Low
+48333,Standard Class,Pacific Asia,West Asia,Arabia Saudí,Cleats,Consumer,239.9600067,0,0.3917606929119656,Low
+35790,Standard Class,USCA,East of USA,Estados Unidos,Fishing,Home Office,399.980011,1,0.3915886247152644,Low
+38802,Standard Class,USCA,US Center,Estados Unidos,Fishing,Consumer,399.980011,0,0.3915620345815094,Low
+10667,Standard Class,Europe,Northern Europe,Reino Unido,Women's Apparel,Corporate,200.0,0,0.39150229080867305,Low
+54091,Standard Class,LATAM,South America,Brasil,Fishing,Corporate,399.980011,0,0.3913450830395183,Low
+33460,Standard Class,USCA,US Center,Estados Unidos,Water Sports,Consumer,199.9900055,1,0.3913325075793726,Low
+36841,Standard Class,USCA,West of USA,Estados Unidos,Women's Apparel,Consumer,100.0,0,0.3913211312186868,Low
+48122,Standard Class,Europe,Eastern Europe,Rusia,Men's Footwear,Corporate,129.9900055,0,0.39127379332423734,Low
+63952,Standard Class,Europe,Southern Europe,Italia,Women's Golf Clubs,Home Office,209.9900055,0,0.3912582970384541,Low
+18423,Standard Class,Europe,Western Europe,Alemania,Indoor/Outdoor Games,Home Office,249.8999939,0,0.3912242970895042,Low
+76673,Standard Class,Pacific Asia,Southeast Asia,Vietnam,Video Games,Home Office,39.75,0,0.391180251319609,Low
+14381,Standard Class,Europe,Northern Europe,Reino Unido,Fishing,Home Office,399.980011,0,0.39113958163020524,Low
+17382,Standard Class,Europe,Southern Europe,España,Women's Apparel,Consumer,150.0,0,0.39113440019481766,Low
+20876,Standard Class,Pacific Asia,Oceania,Australia,Camping & Hiking,Consumer,299.980011,0,0.39111721201829275,Low
+47595,Standard Class,Africa,Central Africa,República Democrática del Congo,Indoor/Outdoor Games,Home Office,199.9199982,1,0.3908108293225506,Low
+61931,Standard Class,Europe,Western Europe,Alemania,Fishing,Corporate,399.980011,0,0.3908025496097075,Low
+50341,Standard Class,Europe,Eastern Europe,Ucrania,Shop By Sport,Corporate,39.99000168,0,0.39068088666754325,Low
+8416,Standard Class,LATAM,South America,Colombia,Girls' Apparel,Consumer,159.9600067,0,0.3906225387009102,Low
+45002,Standard Class,Africa,West Africa,Nigeria,Golf Gloves,Corporate,199.9499969,0,0.39058276584554436,Low
+29917,Standard Class,Pacific Asia,Oceania,Australia,Indoor/Outdoor Games,Consumer,49.97999954,0,0.3899052390035261,Low
+33340,Standard Class,USCA,East of USA,Estados Unidos,Water Sports,Corporate,199.9900055,1,0.38988423117896964,Low
+51783,Standard Class,LATAM,South America,Chile,Camping & Hiking,Consumer,299.980011,0,0.3898773303789119,Low
+51798,Standard Class,LATAM,Central America,Nicaragua,Cardio Equipment,Consumer,299.9700012,0,0.38985932048316957,Low
+54318,Standard Class,LATAM,South America,Brasil,Water Sports,Consumer,199.9900055,0,0.3897829294656674,Low
+51982,Standard Class,LATAM,Central America,El Salvador,Shop By Sport,Consumer,79.98000336,0,0.38962463900910976,Low
+64665,Standard Class,Europe,Northern Europe,Reino Unido,Men's Footwear,Corporate,129.9900055,1,0.38954694180018995,Low
+26429,Standard Class,Pacific Asia,Oceania,Australia,Cleats,Consumer,299.9500122,1,0.3895380169822479,Low
+7040,Standard Class,LATAM,Central America,Guatemala,Camping & Hiking,Corporate,299.980011,1,0.3893244732095292,Low
+1486,Standard Class,LATAM,Central America,México,Men's Footwear,Consumer,129.9900055,0,0.38927668014995886,Low
+13789,Standard Class,Europe,Southern Europe,España,Shop By Sport,Consumer,119.9700012,1,0.38926869066681746,Low
+17507,Standard Class,Europe,Western Europe,Alemania,Indoor/Outdoor Games,Consumer,149.9400024,0,0.3892514703654842,Low
+49037,Standard Class,Africa,West Africa,Nigeria,Cleats,Consumer,179.9700012,0,0.3892410337527439,Low
+26730,Standard Class,Pacific Asia,Southeast Asia,Filipinas,Fishing,Corporate,399.980011,1,0.38910253898096153,Low
+6036,Standard Class,LATAM,Central America,México,Women's Apparel,Consumer,200.0,0,0.3890979005075937,Low
+68418,Standard Class,Europe,Southern Europe,Italia,Women's Apparel,Consumer,100.0,0,0.38905061902577887,Low
+64708,Standard Class,Europe,Western Europe,Alemania,Cleats,Consumer,179.9700012,0,0.3890348615323857,Low
+42911,Standard Class,Pacific Asia,West Asia,Turquía,Men's Footwear,Consumer,129.9900055,0,0.38903226680907754,Low
+13456,Standard Class,Europe,Western Europe,Bélgica,Women's Apparel,Consumer,50.0,0,0.38899469923131297,Low
+59180,Standard Class,LATAM,Central America,México,Men's Footwear,Home Office,129.9900055,1,0.3889552329752292,Low
+5015,Standard Class,LATAM,Central America,El Salvador,Electronics,Consumer,207.9600067,1,0.3888022786010635,Low
+35427,Standard Class,USCA,US Center,Estados Unidos,Cleats,Home Office,119.9800034,0,0.3886825175896852,Low
+28345,Standard Class,Pacific Asia,South Asia,India,Water Sports,Corporate,199.9900055,1,0.38867255411209617,Low
+30816,Standard Class,Pacific Asia,Oceania,Nueva Zelanda,Cleats,Home Office,59.99000168,0,0.3885849269755315,Low
+8803,Standard Class,LATAM,Central America,México,Golf Shoes,Corporate,260.0,0,0.388470699149,Low
+42948,Standard Class,Africa,North Africa,Egipto,Cleats,Consumer,59.99000168,0,0.38841891102998677,Low
+32073,Standard Class,USCA,East of USA,Estados Unidos,Cardio Equipment,Home Office,499.9500122,0,0.38837285724201664,Low
+55507,Standard Class,LATAM,Central America,Honduras,Water Sports,Consumer,199.9900055,0,0.3883403435249084,Low
+61233,Standard Class,LATAM,Central America,México,Women's Apparel,Home Office,100.0,0,0.3882950596096962,Low
+38242,Standard Class,USCA,East of USA,Estados Unidos,Shop By Sport,Home Office,199.9499969,0,0.3882833782057499,Low
+36401,Standard Class,USCA,East of USA,Estados Unidos,Cleats,Home Office,119.9800034,0,0.38817661000744397,Low
+39552,Standard Class,USCA,West of USA,Estados Unidos,Women's Apparel,Corporate,250.0,0,0.3880799378905126,Low
+40436,Standard Class,USCA,US Center,Estados Unidos,Cardio Equipment,Consumer,99.98999786,0,0.3878705667193934,Low
+11742,Standard Class,Europe,Northern Europe,Reino Unido,Cardio Equipment,Consumer,199.9799957,0,0.387793314822321,Low
+26196,Standard Class,Pacific Asia,Southeast Asia,Vietnam,Cleats,Consumer,179.9700012,0,0.3877719820654186,Low
+57174,Standard Class,LATAM,Caribbean,República Dominicana,Indoor/Outdoor Games,Home Office,149.9400024,1,0.3877069714317895,Low
+12567,Standard Class,Europe,Southern Europe,Italia,Women's Apparel,Corporate,150.0,0,0.38761023642160275,Low
+36493,Standard Class,USCA,West of USA,Estados Unidos,Indoor/Outdoor Games,Consumer,249.8999939,0,0.3875983617638458,Low
+48777,Standard Class,Africa,North Africa,Sudán,Water Sports,Consumer,199.9900055,0,0.38755723137212095,Low
+59,Standard Class,LATAM,Central America,Panamá,Cleats,Consumer,59.99000168,1,0.38745094893612364,Low
+27497,Standard Class,Pacific Asia,Eastern Asia,China,Accessories,Consumer,124.9499969,0,0.38736671417070867,Low
+48071,Standard Class,Europe,Eastern Europe,Rusia,Cleats,Consumer,299.9500122,0,0.38734622330791274,Low
+34307,Standard Class,USCA,West of USA,Estados Unidos,Indoor/Outdoor Games,Consumer,199.9199982,0,0.3872801510863245,Low
+9459,Standard Class,LATAM,South America,Colombia,Fishing,Corporate,399.980011,1,0.3872615631455044,Low
+6382,Standard Class,LATAM,Central America,México,Cardio Equipment,Consumer,499.9500122,0,0.3871853922435811,Low
+49033,Standard Class,Africa,West Africa,Nigeria,Cleats,Consumer,179.9700012,0,0.3870966132195942,Low
+9705,Standard Class,LATAM,Central America,Honduras,Fishing,Corporate,399.980011,1,0.38708152939687224,Low
+55181,Standard Class,LATAM,Central America,Panamá,Women's Apparel,Consumer,100.0,0,0.3867768235381771,Low
+25830,Standard Class,Pacific Asia,Southeast Asia,Vietnam,Fishing,Consumer,399.980011,1,0.38674167457213837,Low
+54839,Standard Class,LATAM,South America,Brasil,Indoor/Outdoor Games,Consumer,249.8999939,1,0.3867342620589301,Low
+30874,Standard Class,Pacific Asia,Oceania,Nueva Zelanda,Shop By Sport,Consumer,119.9700012,0,0.3865496696980906,Low
+3125,Standard Class,LATAM,South America,Argentina,Fishing,Consumer,399.980011,1,0.3865314354933936,Low
+52220,Standard Class,LATAM,Central America,Guatemala,Men's Footwear,Corporate,129.9900055,1,0.38640730560233144,Low
+57394,Standard Class,LATAM,Central America,Panamá,Cardio Equipment,Corporate,30.0,1,0.3863821894254807,Low
+48098,Standard Class,Europe,Eastern Europe,Ucrania,Indoor/Outdoor Games,Home Office,199.9199982,0,0.38621384732196035,Low
+59214,Standard Class,LATAM,Central America,Panamá,Cleats,Consumer,119.9800034,1,0.3860635530365963,Low
+39259,Standard Class,USCA,South of  USA,Estados Unidos,Hockey,Consumer,25.0,1,0.38599397653562156,Low
+24767,Standard Class,Pacific Asia,Eastern Asia,China,Indoor/Outdoor Games,Consumer,199.9199982,0,0.38593109286905775,Low
+33987,Standard Class,USCA,East of USA,Estados Unidos,Camping & Hiking,Corporate,299.980011,0,0.385824978330329,Low
+8749,Standard Class,LATAM,Central America,Nicaragua,Indoor/Outdoor Games,Consumer,49.97999954,1,0.3857620180432344,Low
+38220,Standard Class,USCA,South of  USA,Estados Unidos,Indoor/Outdoor Games,Corporate,149.9400024,1,0.3856833539148046,Low
+65982,Standard Class,Europe,Western Europe,Países Bajos,Cleats,Corporate,119.9800034,0,0.38553725219576773,Low
+21560,Standard Class,Pacific Asia,Oceania,Australia,Men's Footwear,Consumer,129.9900055,1,0.38551961060497775,Low
+57995,Standard Class,LATAM,Central America,Honduras,Fishing,Corporate,399.980011,1,0.3853301479223765,Low
+12567,Standard Class,Europe,Southern Europe,Italia,Cardio Equipment,Corporate,499.9500122,0,0.38528657267330657,Low
+37684,Standard Class,USCA,US Center,Estados Unidos,Men's Footwear,Home Office,129.9900055,1,0.38522143139516074,Low
+59214,Standard Class,LATAM,Central America,Panamá,Men's Footwear,Consumer,129.9900055,1,0.3851450714324765,Low
+31441,Standard Class,USCA,US Center,Estados Unidos,Cleats,Consumer,179.9700012,0,0.38509018449449306,Low
+6770,Standard Class,LATAM,Central America,Honduras,Cleats,Consumer,119.9800034,1,0.3850826001873297,Low
+3013,Standard Class,LATAM,Central America,Honduras,Water Sports,Home Office,199.9900055,0,0.3848795250909845,Low
+48300,Standard Class,Pacific Asia,West Asia,Turquía,Camping & Hiking,Home Office,299.980011,1,0.38478721513614633,Low
+29282,Standard Class,Pacific Asia,South Asia,Bangladés,Water Sports,Home Office,199.9900055,0,0.38476688003910003,Low
+62709,Standard Class,Europe,Northern Europe,Reino Unido,Indoor/Outdoor Games,Consumer,249.8999939,1,0.38474739376758843,Low
+37379,Standard Class,USCA,US Center,Estados Unidos,Girls' Apparel,Consumer,119.9700012,1,0.3845787418844463,Low
+44577,Standard Class,Africa,North Africa,Egipto,Indoor/Outdoor Games,Consumer,49.97999954,0,0.3845659337285233,Low
+65033,Standard Class,Europe,Western Europe,Países Bajos,Women's Apparel,Home Office,50.0,0,0.3844666864307479,Low
+76074,Standard Class,Pacific Asia,Eastern Asia,Japón,Toys,Home Office,11.53999996,1,0.3844455229281262,Low
+56160,Standard Class,LATAM,Central America,México,Women's Apparel,Home Office,200.0,1,0.384239552376618,Low
+64622,Standard Class,Europe,Western Europe,Alemania,Men's Footwear,Consumer,129.9900055,0,0.38354674614081047,Low
+22490,Standard Class,Pacific Asia,South Asia,India,Men's Footwear,Home Office,129.9900055,1,0.3833278193208372,Low
+53254,Standard Class,LATAM,Central America,Nicaragua,Indoor/Outdoor Games,Consumer,249.8999939,1,0.38317927662673773,Low
+51641,Standard Class,LATAM,South America,Venezuela,Indoor/Outdoor Games,Consumer,199.9199982,0,0.38282444272161864,Low
+2055,Standard Class,LATAM,South America,Brasil,Men's Footwear,Corporate,129.9900055,1,0.3825737580836417,Low
+48970,Standard Class,Pacific Asia,West Asia,Turquía,Women's Apparel,Corporate,150.0,1,0.38247198526995124,Low
+22682,Standard Class,Pacific Asia,Southeast Asia,Filipinas,Women's Apparel,Corporate,250.0,0,0.3823282967973015,Low
+34961,Standard Class,USCA,West of USA,Estados Unidos,Camping & Hiking,Consumer,299.980011,0,0.3822429039371915,Low
+28894,Standard Class,Pacific Asia,Eastern Asia,China,Cleats,Corporate,239.9600067,1,0.38218131195632565,Low
+56799,Standard Class,LATAM,South America,Argentina,Women's Apparel,Consumer,150.0,1,0.3819296823012548,Low
+12842,Standard Class,Europe,Northern Europe,Reino Unido,Water Sports,Consumer,199.9900055,0,0.3817825320906809,Low
+69331,Standard Class,Europe,Southern Europe,España,CDs,Corporate,11.28999996,0,0.38136426865805956,Low
+63163,Standard Class,Europe,Southern Europe,España,Women's Apparel,Corporate,200.0,0,0.38123038212580235,Low
+26669,Standard Class,Pacific Asia,Eastern Asia,China,Indoor/Outdoor Games,Corporate,199.9199982,1,0.3807250771615063,Low
+59158,Standard Class,LATAM,Central America,Panamá,Women's Apparel,Consumer,150.0,0,0.3798215422025014,Low
+63422,Standard Class,Europe,Northern Europe,Reino Unido,Cleats,Corporate,179.9700012,0,0.3797149228926242,Low
+45990,Standard Class,USCA,Canada,Canada,Women's Apparel,Corporate,100.0,1,0.37948177707464986,Low
+26827,Standard Class,Pacific Asia,Southeast Asia,Malasia,Shop By Sport,Consumer,199.9499969,0,0.3794652579793962,Low
+22294,Standard Class,Pacific Asia,Southeast Asia,Indonesia,Fishing,Consumer,399.980011,1,0.3792656612554379,Low
+42661,Standard Class,USCA,Canada,Canada,Cleats,Consumer,299.9500122,0,0.37861271286245496,Low
+44943,Standard Class,Africa,North Africa,Egipto,Water Sports,Consumer,199.9900055,0,0.3779317523284502,Low
+24226,Standard Class,Pacific Asia,Southeast Asia,Indonesia,Cleats,Consumer,59.99000168,0,0.37765761715587637,Low
+59365,Standard Class,LATAM,Central America,México,Indoor/Outdoor Games,Consumer,149.9400024,1,0.37645116973909026,Low
+45433,Standard Class,Europe,Eastern Europe,República Checa,Indoor/Outdoor Games,Home Office,149.9400024,0,0.37629777712172324,Low
+8714,Standard Class,LATAM,Central America,Panamá,Water Sports,Consumer,199.9900055,1,0.3750874096845454,Low
+57821,Standard Class,LATAM,Central America,Honduras,Water Sports,Consumer,199.9900055,0,0.3748811520245763,Low
+9146,Standard Class,LATAM,Caribbean,Cuba,Water Sports,Home Office,199.9900055,0,0.3747414131091255,Low
+77101,Standard Class,Pacific Asia,South Asia,Bangladés,Women's Clothing,Consumer,215.8200073,0,0.374492201871984,Low
+14979,Standard Class,Europe,Southern Europe,Italia,Indoor/Outdoor Games,Corporate,49.97999954,1,0.37430118093232057,Low
+58645,Standard Class,LATAM,Caribbean,Cuba,Cardio Equipment,Consumer,199.9799957,1,0.37425496385552653,Low
+58939,Standard Class,LATAM,Caribbean,Cuba,Fishing,Consumer,399.980011,1,0.3737769355380609,Low
+3867,Standard Class,LATAM,Central America,Panamá,Fishing,Corporate,399.980011,0,0.37352971354063474,Low
+55972,Standard Class,LATAM,Caribbean,Cuba,Girls' Apparel,Corporate,79.98000336,0,0.3733466998100096,Low
+53767,Standard Class,LATAM,Caribbean,Cuba,Cardio Equipment,Home Office,199.9799957,0,0.37216505604543176,Low
+68930,Standard Class,Europe,Western Europe,Alemania,Books,Corporate,31.07999992,1,0.37155470108244426,Low
+20268,Standard Class,Europe,Northern Europe,Reino Unido,Camping & Hiking,Home Office,299.980011,0,0.37143877979290646,Low
+13131,Standard Class,Europe,Northern Europe,Reino Unido,Men's Footwear,Corporate,129.9900055,0,0.3714026342206491,Low
+60501,Standard Class,LATAM,Caribbean,Cuba,Fishing,Consumer,399.980011,0,0.37064511319925064,Low
+15731,Standard Class,Europe,Western Europe,Francia,Golf Apparel,Consumer,19.98999977,0,0.3692093134566472,Low
+9188,Standard Class,LATAM,Central America,El Salvador,Golf Apparel,Corporate,59.97000122,0,0.3689010926668856,Low
+15322,Standard Class,Europe,Western Europe,Alemania,Indoor/Outdoor Games,Corporate,249.8999939,0,0.3688114302827042,Low
+68842,Standard Class,Europe,Western Europe,Alemania,Indoor/Outdoor Games,Corporate,199.9199982,0,0.36880934360564605,Low
+517,Standard Class,LATAM,Central America,Panamá,Camping & Hiking,Consumer,299.980011,0,0.36841090348927086,Low
+40383,Standard Class,USCA,US Center,Estados Unidos,Cardio Equipment,Consumer,499.9500122,0,0.36805845146166366,Low
+1100,Standard Class,LATAM,Central America,El Salvador,Indoor/Outdoor Games,Home Office,99.95999908,0,0.3679017081862833,Low
+61318,Standard Class,LATAM,South America,Brasil,Boxing & MMA,Corporate,474.9500122,0,0.36779922591578995,Low
+67526,Standard Class,Europe,Western Europe,Francia,Hockey,Consumer,329.9899902,0,0.3677802286054608,Low
+50843,Standard Class,Africa,West Africa,Nigeria,Fishing,Consumer,399.980011,0,0.3677036074119959,Low
+56479,Standard Class,LATAM,Central America,El Salvador,Electronics,Consumer,127.9599991,1,0.36699649734194817,Low
+29435,Standard Class,Pacific Asia,Southeast Asia,Filipinas,Fishing,Consumer,399.980011,1,0.366884360750847,Low
+52530,Standard Class,LATAM,Central America,Guatemala,Golf Apparel,Consumer,19.98999977,1,0.3668536465405717,Low
+25942,Standard Class,Pacific Asia,Southeast Asia,Indonesia,Golf Balls,Consumer,44.97000122,0,0.3666413048437026,Low
+45860,Standard Class,Africa,North Africa,Egipto,Women's Apparel,Corporate,150.0,1,0.3662305122630808,Low
+19499,Standard Class,Europe,Western Europe,Bélgica,Cleats,Corporate,119.9800034,1,0.36600781234647134,Low
+28030,Standard Class,Pacific Asia,Eastern Asia,China,Men's Footwear,Home Office,129.9900055,1,0.365708222639809,Low
+42838,Standard Class,Africa,North Africa,Marruecos,Indoor/Outdoor Games,Consumer,199.9199982,0,0.3656952528318941,Low
+707,Standard Class,LATAM,Central America,México,Camping & Hiking,Home Office,299.980011,0,0.3653810273648826,Low
+55147,Standard Class,LATAM,Central America,Panamá,Fishing,Home Office,399.980011,0,0.36524016037678486,Low
+17308,Standard Class,Europe,Western Europe,Suiza,Golf Balls,Consumer,44.97000122,0,0.3651482332895754,Low
+9568,Standard Class,LATAM,Central America,Guatemala,Indoor/Outdoor Games,Corporate,199.9199982,0,0.3651382597292949,Low
+33077,Standard Class,USCA,East of USA,Estados Unidos,Shop By Sport,Home Office,79.98000336,0,0.36366773490923204,Low
+31150,Standard Class,Pacific Asia,Oceania,Nueva Zelanda,Indoor/Outdoor Games,Consumer,249.8999939,1,0.3636514025675857,Low
+1383,Standard Class,LATAM,South America,Brasil,Cleats,Consumer,239.9600067,0,0.3636443389795624,Low
+42897,Standard Class,Africa,West Africa,Ghana,Electronics,Consumer,239.9499969,0,0.36360901140780233,Low
+16996,Standard Class,Europe,Western Europe,Países Bajos,Shop By Sport,Corporate,119.9700012,0,0.36343690247519966,Low
+74582,Standard Class,Pacific Asia,Oceania,Australia,Consumer Electronics,Corporate,252.8800049,0,0.3633584357538839,Low
+6101,Standard Class,LATAM,Caribbean,República Dominicana,Men's Footwear,Consumer,129.9900055,0,0.36330849714379,Low
+52989,Standard Class,LATAM,Central America,México,Cardio Equipment,Consumer,199.9799957,1,0.36324854787537414,Low
+66980,Standard Class,Europe,Western Europe,Francia,Cardio Equipment,Corporate,199.9799957,1,0.36291158365369236,Low
+30095,Standard Class,Pacific Asia,Eastern Asia,China,Cardio Equipment,Corporate,399.9599915,1,0.3626978138133908,Low
+43551,Standard Class,Europe,Eastern Europe,Ucrania,Cleats,Consumer,239.9600067,0,0.3626676935041944,Low
+61964,Standard Class,Europe,Western Europe,Francia,Cardio Equipment,Corporate,499.9500122,1,0.36263721171146646,Low
+7692,Standard Class,LATAM,Caribbean,Martinica,Indoor/Outdoor Games,Home Office,249.8999939,0,0.36237614087965286,Low
+8221,Standard Class,LATAM,South America,Argentina,Men's Footwear,Consumer,129.9900055,0,0.3622911179797949,Low
+20004,Standard Class,Europe,Northern Europe,Reino Unido,Water Sports,Consumer,199.9900055,1,0.36227415150784303,Low
+23839,Standard Class,Pacific Asia,South Asia,India,Water Sports,Consumer,199.9900055,1,0.3622738160561715,Low
+48835,Standard Class,Pacific Asia,West Asia,Arabia Saudí,Cardio Equipment,Consumer,499.9500122,1,0.36197203719145005,Low
+56159,Standard Class,LATAM,Central America,México,Trade-In,Corporate,21.98999977,1,0.36170063744636244,Low
+42142,Standard Class,Pacific Asia,South Asia,Irán,Cleats,Home Office,239.9600067,0,0.3616798953979262,Low
+20774,Standard Class,Pacific Asia,Southeast Asia,Filipinas,Cleats,Corporate,119.9800034,0,0.3613845519276269,Low
+22789,Standard Class,Pacific Asia,South Asia,India,Women's Apparel,Consumer,150.0,1,0.3613326839733079,Low
+40705,Standard Class,USCA,East of USA,Estados Unidos,Indoor/Outdoor Games,Consumer,49.97999954,1,0.3612984669903371,Low
+51095,Standard Class,Africa,West Africa,Nigeria,Water Sports,Corporate,199.9900055,1,0.3612650103485769,Low
+20902,Standard Class,Pacific Asia,Oceania,Australia,Cleats,Home Office,179.9700012,0,0.3612646858105076,Low
+54618,Standard Class,LATAM,South America,Brasil,Women's Apparel,Corporate,150.0,0,0.361216778814495,Low
+19105,Standard Class,Europe,Western Europe,Francia,Women's Apparel,Corporate,50.0,1,0.36086599610314035,Low
+32132,Standard Class,USCA,South of  USA,Estados Unidos,Fishing,Consumer,399.980011,0,0.36081972911124166,Low
+15853,Standard Class,Europe,Southern Europe,España,Trade-In,Consumer,65.97000122,0,0.3608166521984062,Low
+33191,Standard Class,USCA,South of  USA,Estados Unidos,Water Sports,Consumer,199.9900055,0,0.3608118683876372,Low
+37909,Standard Class,USCA,South of  USA,Estados Unidos,Cleats,Corporate,239.9600067,1,0.36070337235676836,Low
+10049,Standard Class,LATAM,South America,Brasil,Women's Apparel,Consumer,200.0,0,0.3604814222424703,Low
+44617,Standard Class,Pacific Asia,West Asia,Irak,Shop By Sport,Consumer,39.99000168,0,0.3603791119803432,Low
+36903,Standard Class,USCA,South of  USA,Estados Unidos,Cleats,Corporate,119.9800034,0,0.36004400873865544,Low
+8311,Standard Class,LATAM,Central America,Honduras,Shop By Sport,Home Office,39.99000168,0,0.36001580968176816,Low
+13310,Standard Class,Europe,Southern Europe,España,Women's Apparel,Consumer,150.0,1,0.35992535977160056,Low
+64664,Standard Class,Europe,Northern Europe,Reino Unido,Men's Golf Clubs,Corporate,134.9900055,1,0.3598439729594006,Low
+23688,Standard Class,Pacific Asia,Eastern Asia,China,Indoor/Outdoor Games,Consumer,99.95999908,0,0.35970311123938437,Low
+18894,Standard Class,Europe,Northern Europe,Reino Unido,Cleats,Corporate,179.9700012,1,0.35968954684182636,Low
+43597,Standard Class,Africa,North Africa,Marruecos,Fishing,Corporate,399.980011,0,0.3593709593066133,Low
+26602,Standard Class,Pacific Asia,Eastern Asia,China,Men's Footwear,Consumer,129.9900055,0,0.3593473114415253,Low
+22151,Standard Class,Pacific Asia,Southeast Asia,Indonesia,Women's Apparel,Consumer,150.0,0,0.35887337591243645,Low
+62782,Standard Class,Europe,Western Europe,Francia,Cleats,Corporate,299.9500122,0,0.3583890936165649,Low
+10107,Standard Class,LATAM,South America,Brasil,Water Sports,Consumer,199.9900055,0,0.35820222003933555,Low
+44172,Standard Class,Pacific Asia,West Asia,Turquía,Indoor/Outdoor Games,Consumer,149.9400024,0,0.3571396937094081,Low
+61072,Standard Class,LATAM,Caribbean,Cuba,Fishing,Consumer,399.980011,0,0.3563538430472065,Low
+47512,Standard Class,Africa,North Africa,Marruecos,Cleats,Home Office,179.9700012,0,0.3562698595757847,Low
+7074,Standard Class,LATAM,Central America,Honduras,Cardio Equipment,Consumer,499.9500122,1,0.3562105101910547,Low
+46899,Standard Class,Pacific Asia,West Asia,Turquía,Women's Apparel,Corporate,200.0,0,0.3548637818452441,Low
+38538,Standard Class,USCA,West of USA,Estados Unidos,Men's Footwear,Home Office,129.9900055,0,0.35481501227541506,Low
+41642,Standard Class,Africa,North Africa,Marruecos,Cardio Equipment,Corporate,299.9700012,0,0.35474220914301124,Low
+45882,Standard Class,USCA,Canada,Canada,Indoor/Outdoor Games,Corporate,49.97999954,0,0.35227174918891774,Low
+35703,Standard Class,USCA,US Center,Estados Unidos,Indoor/Outdoor Games,Home Office,99.95999908,0,0.35099968449560787,Low
+60460,Standard Class,LATAM,Caribbean,Cuba,Indoor/Outdoor Games,Consumer,199.9199982,0,0.3491779211670604,Low
+54508,Standard Class,LATAM,Caribbean,Cuba,Camping & Hiking,Consumer,299.980011,0,0.34434771405575704,Low
+42777,Standard Class,Pacific Asia,West Asia,Turquía,Men's Footwear,Consumer,129.9900055,0,0.3440888502806148,Low
+51177,Standard Class,Pacific Asia,West Asia,Turquía,Shop By Sport,Corporate,120.0,0,0.3417563559160134,Low
+42147,Standard Class,USCA,Canada,Canada,Shop By Sport,Corporate,119.9700012,0,0.34110053196416223,Low

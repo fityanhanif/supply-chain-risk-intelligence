@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+models/*.joblib
+# Keep generated CSV/JSON for portfolio reproducibility unless repo size becomes a problem.

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Supply Chain Risk Intelligence</title>
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <style>
+    :root{
+      --bg:#0b1020;--panel:#121a2e;--panel2:#17213a;--ink:#edf4ff;--muted:#8fa2c5;
+      --line:rgba(255,255,255,.09);--blue:#60a5fa;--green:#34d399;--amber:#fbbf24;--rose:#fb7185;--violet:#a78bfa;
+    }
+    *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at top left,#172554 0,#0b1020 34%,#070a12 100%);color:var(--ink);font-family:Aptos,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif} a{color:var(--blue)}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(circle at 35% 15%,#000,transparent 62%)}
+    .shell{display:grid;grid-template-columns:280px 1fr;min-height:100vh}.side{position:sticky;top:0;height:100vh;padding:28px 22px;background:rgba(8,13,25,.86);border-right:1px solid var(--line);backdrop-filter:blur(16px)}
+    .brand{font-size:13px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}.side h1{font-size:26px;line-height:1.05;margin:12px 0 12px}.side p{color:var(--muted);font-size:14px;line-height:1.55}.nav{display:grid;gap:8px;margin-top:26px}.nav button{border:1px solid transparent;background:transparent;color:var(--muted);text-align:left;border-radius:12px;padding:11px 12px;cursor:pointer;font-weight:650}.nav button.active,.nav button:hover{background:linear-gradient(90deg,rgba(96,165,250,.18),rgba(52,211,153,.08));border-color:var(--line);color:var(--ink)}
+    main{padding:32px;max-width:1500px;position:relative;z-index:1}.hero{display:grid;grid-template-columns:1.3fr .7fr;gap:18px;margin-bottom:22px}.card,.chart,.table-wrap,.insight{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:22px;box-shadow:0 22px 60px rgba(0,0,0,.18)}
+    .signal-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:-4px 0 18px;overflow:hidden}.signal-strip div{padding:16px 18px;border-right:1px solid var(--line)}.signal-strip div:last-child{border-right:0}.signal-strip span{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}.signal-strip strong{font-size:14px}.hero-card{padding:28px}.hero h2{font-size:42px;line-height:1;margin:0 0 12px}.hero p{color:var(--muted);line-height:1.7;margin:0}.badge{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:rgba(96,165,250,.09);color:#bfdbfe;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:800;margin-bottom:18px}.summary{padding:24px}.summary strong{font-size:36px;display:block}.summary span{color:var(--muted);font-size:13px}.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:24px}.kpi{padding:18px}.kpi .label{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.08em}.kpi .value{font-size:27px;font-weight:850;margin-top:8px}.kpi .sub{color:var(--muted);font-size:12px;margin-top:8px}.section{display:none}.section.active{display:block}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.grid.three{grid-template-columns:repeat(3,1fr)}.chart{padding:20px;min-height:360px}.chart h3,.table-wrap h3,.insight h3{margin:0 0 14px;font-size:17px}.chart canvas{width:100%!important;max-height:300px}.table-wrap{padding:20px;overflow:auto}.table{width:100%;border-collapse:collapse;font-size:13px}.table th,.table td{border-bottom:1px solid var(--line);padding:10px 8px;text-align:left;white-space:nowrap}.table th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em}.pill{border-radius:999px;padding:4px 8px;font-size:12px;font-weight:800}.High,.Critical{background:rgba(251,113,133,.16);color:#fecdd3}.Medium,.Strategic{background:rgba(251,191,36,.16);color:#fde68a}.Low,.HighImpact{background:rgba(52,211,153,.16);color:#bbf7d0}.ModelGovernance{background:rgba(167,139,250,.16);color:#ddd6fe}.insight{padding:20px}.insight p{color:var(--muted);line-height:1.55}.rec{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.rec ul{padding-left:18px;color:var(--muted);line-height:1.55}.footer{color:var(--muted);font-size:12px;margin-top:26px}.note{padding:16px;border:1px solid var(--line);border-radius:16px;background:rgba(251,191,36,.08);color:#fde68a;margin-bottom:18px}
+    @media(max-width:1100px){.shell{grid-template-columns:1fr}.side{position:relative;height:auto}.hero,.grid,.grid.three,.rec{grid-template-columns:1fr}.signal-strip{grid-template-columns:1fr 1fr}.kpis{grid-template-columns:repeat(2,1fr)}main{padding:20px}.hero h2{font-size:34px}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside class="side">
+      <div class="brand">Portfolio Dashboard</div>
+      <h1>Supply Chain Risk Intelligence</h1>
+      <p>Delivery risk, profitability, and late-shipment prediction from 180K+ DataCo supply chain orders.</p>
+      <nav class="nav" id="nav">
+        <button class="active" data-tab="overview">Executive Overview</button>
+        <button data-tab="delivery">Delivery Risk</button>
+        <button data-tab="profit">Profitability</button>
+        <button data-tab="customer">Customer & Region</button>
+        <button data-tab="model">Model Insights</button>
+        <button data-tab="recs">Recommendations</button>
+      </nav>
+      <p class="footer">Static HTML + Chart.js. Data generated by Python pipeline.</p>
+    </aside>
+    <main>
+      <section class="hero">
+        <div class="hero-card card">
+          <div class="badge">Risk-based fulfillment analytics</div>
+          <h2>Find late delivery risk before it becomes a service problem.</h2>
+          <p>This dashboard connects shipment performance, market/category profitability, and a leakage-aware ML baseline into one executive view.</p>
+        </div>
+        <div class="summary card">
+          <span>Primary finding</span>
+          <strong id="heroLate">--</strong>
+          <p style="color:var(--muted);line-height:1.6">of historical orders are flagged as late delivery risk.</p>
+        </div>
+      </section>
+
+      <section class="signal-strip card" aria-label="Project quality signals">
+        <div><span>Dataset</span><strong>180K+ order records</strong></div>
+        <div><span>Governance</span><strong>No post shipment leakage</strong></div>
+        <div><span>Output</span><strong>Clean data, marts, model, dashboard</strong></div>
+        <div><span>Use case</span><strong>Risk based fulfillment queue</strong></div>
+      </section>
+
+      <div class="kpis" id="kpis"></div>
+
+      <section class="section active" data-tab="overview">
+        <div class="grid">
+          <div class="chart"><h3>Delivery status distribution</h3><canvas id="deliveryStatusChart"></canvas></div>
+          <div class="chart"><h3>Monthly late delivery rate</h3><canvas id="monthlyChart"></canvas></div>
+        </div>
+        <div class="grid three" id="insights" style="margin-top:18px"></div>
+      </section>
+
+      <section class="section" data-tab="delivery">
+        <div class="grid">
+          <div class="chart"><h3>Late rate by shipping mode</h3><canvas id="shippingChart"></canvas></div>
+          <div class="table-wrap"><h3>Top risky region x shipping mode</h3><table class="table" id="riskyTable"></table></div>
+        </div>
+      </section>
+
+      <section class="section" data-tab="profit">
+        <div class="grid">
+          <div class="chart"><h3>Top categories by sales</h3><canvas id="categoryChart"></canvas></div>
+          <div class="chart"><h3>High revenue / low margin segments</h3><canvas id="marginChart"></canvas></div>
+        </div>
+        <div class="table-wrap" style="margin-top:18px"><h3>Profitability detail</h3><table class="table" id="profitTable"></table></div>
+      </section>
+
+      <section class="section" data-tab="customer">
+        <div class="table-wrap"><h3>Customer segment x market performance</h3><table class="table" id="customerTable"></table></div>
+      </section>
+
+      <section class="section" data-tab="model">
+        <div class="note">The model excludes post-shipment leakage fields such as actual shipping days and final delivery status.</div>
+        <div class="grid">
+          <div class="chart"><h3>Feature importance</h3><canvas id="featureChart"></canvas></div>
+          <div class="chart"><h3>Risk score sample</h3><canvas id="scoreChart"></canvas></div>
+        </div>
+        <div class="table-wrap" style="margin-top:18px"><h3>High-risk scored orders</h3><table class="table" id="scoreTable"></table></div>
+      </section>
+
+      <section class="section" data-tab="recs">
+        <div class="rec" id="recs"></div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const CH = {};
+    const fmt = new Intl.NumberFormat('en-US');
+    const money = (n) => '$' + new Intl.NumberFormat('en-US', {notation:'compact', maximumFractionDigits:2}).format(n || 0);
+    const pct = (n) => ((n || 0) * 100).toFixed(1) + '%';
+    const compact = (n) => new Intl.NumberFormat('en-US', {notation:'compact', maximumFractionDigits:1}).format(n || 0);
+    const colors = ['#60a5fa','#34d399','#fbbf24','#fb7185','#a78bfa','#22d3ee','#f97316','#e879f9'];
+
+    function tabName(s){ return String(s || '').replace(/\s+/g,''); }
+    function chartOptions(extra={}){
+      return Object.assign({
+        responsive:true,
+        maintainAspectRatio:false,
+        plugins:{legend:{labels:{color:'#cbd5e1'}},tooltip:{mode:'index',intersect:false}},
+        scales:{x:{ticks:{color:'#8fa2c5'},grid:{color:'rgba(255,255,255,.06)'}},y:{ticks:{color:'#8fa2c5'},grid:{color:'rgba(255,255,255,.06)'}}}
+      }, extra);
+    }
+    function bar(id, labels, values, label, formatter){
+      CH[id] = new Chart(document.getElementById(id), {type:'bar', data:{labels,datasets:[{label,data:values,backgroundColor:colors,borderWidth:0,borderRadius:8}]}, options:chartOptions({plugins:{legend:{display:false},tooltip:{callbacks:{label:(c)=> `${label}: ${formatter?formatter(c.raw):c.raw}`}}}})});
+    }
+    function line(id, labels, values, label){
+      CH[id] = new Chart(document.getElementById(id), {type:'line', data:{labels,datasets:[{label,data:values,borderColor:'#60a5fa',backgroundColor:'rgba(96,165,250,.15)',fill:true,tension:.32}]}, options:chartOptions({plugins:{legend:{display:false},tooltip:{callbacks:{label:(c)=> `${label}: ${pct(c.raw)}`}}},scales:{x:{ticks:{color:'#8fa2c5',maxTicksLimit:8},grid:{color:'rgba(255,255,255,.06)'}},y:{ticks:{color:'#8fa2c5',callback:(v)=> (v*100).toFixed(0)+'%'},grid:{color:'rgba(255,255,255,.06)'}}}})});
+    }
+    function table(id, rows, cols){
+      const el = document.getElementById(id);
+      el.innerHTML = '<thead><tr>' + cols.map(c=>`<th>${c.label}</th>`).join('') + '</tr></thead><tbody>' + rows.map(r => '<tr>' + cols.map(c => `<td>${c.render ? c.render(r[c.key], r) : (r[c.key] ?? '')}</td>`).join('') + '</tr>').join('') + '</tbody>';
+    }
+    function switchTab(tab){
+      document.querySelectorAll('.section').forEach(s => s.classList.toggle('active', s.dataset.tab === tab));
+      document.querySelectorAll('.nav button').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+      setTimeout(()=>Object.values(CH).forEach(ch=>ch.resize && ch.resize()), 120);
+    }
+    document.getElementById('nav').addEventListener('click', e => { if(e.target.dataset.tab) switchTab(e.target.dataset.tab); });
+
+    fetch('assets/dashboard_data.json').then(r => r.json()).then(data => {
+      const k = data.kpis;
+      document.getElementById('heroLate').textContent = pct(k.late_delivery_rate);
+      const kpiData = [
+        ['Orders', fmt.format(k.total_orders), 'cleaned order records'],
+        ['Sales', money(k.total_sales), 'dataset sales proxy'],
+        ['Profit', money(k.total_profit), 'benefit per order sum'],
+        ['Late Risk', pct(k.late_delivery_rate), 'historical baseline'],
+        ['Model Recall', pct(k.model_recall_late), `${data.kpis.best_model} late class`]
+      ];
+      document.getElementById('kpis').innerHTML = kpiData.map(x => `<div class="kpi card"><div class="label">${x[0]}</div><div class="value">${x[1]}</div><div class="sub">${x[2]}</div></div>`).join('');
+
+      const statusLabels = Object.keys(data.delivery_status);
+      CH.deliveryStatusChart = new Chart(document.getElementById('deliveryStatusChart'), {type:'doughnut',data:{labels:statusLabels,datasets:[{data:statusLabels.map(x=>data.delivery_status[x]),backgroundColor:colors,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#cbd5e1'}}}}});
+      line('monthlyChart', data.monthly_trend.map(d=>d.order_month), data.monthly_trend.map(d=>d.late_rate), 'Late rate');
+      bar('shippingChart', data.shipping_mode.map(d=>d.shipping_mode), data.shipping_mode.map(d=>d.late_rate), 'Late rate', pct);
+      bar('categoryChart', data.top_categories.map(d=>d.category_name).slice(0,8), data.top_categories.map(d=>d.sales).slice(0,8), 'Sales', money);
+      bar('marginChart', data.high_revenue_low_margin.map(d=>d.category_name).slice(0,8), data.high_revenue_low_margin.map(d=>d.profit_margin).slice(0,8), 'Margin', pct);
+      bar('featureChart', data.feature_importance.map(d=>d.feature.replace('cat__','')).slice(0,10), data.feature_importance.map(d=>d.importance).slice(0,10), 'Importance');
+      CH.scoreChart = new Chart(document.getElementById('scoreChart'), {type:'bar',data:{labels:['Low','Medium','High'],datasets:[{data:['Low','Medium','High'].map(l=>data.scoring_sample.filter(x=>x.risk_level===l).length),backgroundColor:['#34d399','#fbbf24','#fb7185'],borderRadius:8}]},options:chartOptions({plugins:{legend:{display:false}}})});
+
+      document.getElementById('insights').innerHTML = data.insights.map(i => `<div class="insight"><span class="pill ${tabName(i.priority)}">${i.priority}</span><h3>${i.title}</h3><p><strong>${i.metric}</strong></p><p>${i.detail}</p></div>`).join('');
+      document.getElementById('recs').innerHTML = data.recommendations.map(r => `<div class="insight"><span class="pill ${tabName(r.priority)}">${r.priority}</span><h3>${r.title}</h3><p><strong>${r.current_metric}</strong><br>${r.target}</p><ul>${r.actions.map(a=>`<li>${a}</li>`).join('')}</ul></div>`).join('');
+
+      table('riskyTable', data.risky_regions, [
+        {key:'market',label:'Market'}, {key:'order_region',label:'Region'}, {key:'shipping_mode',label:'Mode'}, {key:'orders',label:'Orders',render:v=>fmt.format(v)}, {key:'late_rate',label:'Late Rate',render:pct}
+      ]);
+      table('profitTable', data.profitability.slice(0,15), [
+        {key:'market',label:'Market'}, {key:'order_region',label:'Region'}, {key:'category_name',label:'Category'}, {key:'sales',label:'Sales',render:money}, {key:'profit_margin',label:'Margin',render:pct}, {key:'late_rate',label:'Late Rate',render:pct}
+      ]);
+      table('customerTable', data.customer_market, [
+        {key:'customer_segment',label:'Segment'}, {key:'market',label:'Market'}, {key:'orders',label:'Orders',render:v=>fmt.format(v)}, {key:'sales',label:'Sales',render:money}, {key:'profit_margin',label:'Margin',render:pct}, {key:'late_rate',label:'Late Rate',render:pct}
+      ]);
+      table('scoreTable', data.scoring_sample.slice(0,20), [
+        {key:'order_id',label:'Order'}, {key:'market',label:'Market'}, {key:'shipping_mode',label:'Mode'}, {key:'category_name',label:'Category'}, {key:'delivery_risk_probability',label:'Risk',render:pct}, {key:'risk_level',label:'Level',render:v=>`<span class="pill ${v}">${v}</span>`}
+      ]);
+    }).catch(err => {
+      document.querySelector('main').innerHTML = `<div class="note">Failed to load dashboard data: ${err.message}</div>`;
+    });
+  </script>
+</body>
+</html>

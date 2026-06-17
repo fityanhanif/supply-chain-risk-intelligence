@@ -1,0 +1,43 @@
+{
+  "source_file": "D:\\Project_Portofolio\\supply-chain-risk-intelligence\\data\\raw\\DataCoSupplyChainDataset.csv",
+  "original_rows": 180519,
+  "original_columns": 53,
+  "clean_rows": 180519,
+  "clean_columns": 51,
+  "late_delivery_orders": 98977,
+  "late_delivery_rate": 0.5482913155955883,
+  "total_sales": 36784735.01337984,
+  "total_profit": 3966902.974050357,
+  "avg_profit_margin": 0.10832611654592827,
+  "delivery_status": {
+    "Late delivery": 98977,
+    "Advance shipping": 41592,
+    "Shipping on time": 32196,
+    "Shipping canceled": 7754
+  },
+  "shipping_mode": {
+    "Standard Class": 107752,
+    "Second Class": 35216,
+    "First Class": 27814,
+    "Same Day": 9737
+  },
+  "market": {
+    "LATAM": 51594,
+    "Europe": 50252,
+    "Pacific Asia": 41260,
+    "USCA": 25799,
+    "Africa": 11614
+  },
+  "removed_pii_columns": [
+    "customer_email",
+    "customer_fname",
+    "customer_lname",
+    "customer_password",
+    "customer_street",
+    "customer_zipcode",
+    "latitude",
+    "longitude",
+    "product_description",
+    "product_image"
+  ]
+}

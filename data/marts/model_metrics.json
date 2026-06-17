@@ -1,0 +1,84 @@
+{
+  "target": "late_delivery_risk",
+  "business_priority": "Recall for late-delivery class is prioritized because missing risky shipments is costlier than over-flagging.",
+  "model_type": "operational_prediction_no_post_shipment_leakage",
+  "excluded_leakage_columns": [
+    "days_for_shipping_real",
+    "delivery_status",
+    "is_late",
+    "late_delivery_risk",
+    "order_profit_per_order",
+    "order_status",
+    "shipping_date_dateorders",
+    "shipping_gap"
+  ],
+  "features_used": {
+    "numeric": [
+      "days_for_shipment_scheduled",
+      "sales_per_customer",
+      "order_item_discount",
+      "order_item_discount_rate",
+      "order_item_product_price",
+      "order_item_quantity",
+      "sales",
+      "order_item_total",
+      "product_price",
+      "order_year"
+    ],
+    "categorical": [
+      "type",
+      "category_name",
+      "customer_city",
+      "customer_country",
+      "customer_segment",
+      "customer_state",
+      "department_name",
+      "market",
+      "order_country",
+      "order_region",
+      "order_state",
+      "shipping_mode",
+      "order_quarter",
+      "order_dayofweek"
+    ]
+  },
+  "train_rows": 135389,
+  "test_rows": 45130,
+  "best_model": "random_forest",
+  "metrics": {
+    "logistic_regression": {
+      "accuracy": 0.7001551074673167,
+      "precision_late": 0.8296483594025638,
+      "recall_late": 0.5701988360814743,
+      "f1_late": 0.6758802395209581,
+      "roc_auc": 0.758296311038534,
+      "confusion_matrix": [
+        [
+          17489,
+          2897
+        ],
+        [
+          10635,
+          14109
+        ]
+      ]
+    },
+    "random_forest": {
+      "accuracy": 0.6957013073343674,
+      "precision_late": 0.8135429124665414,
+      "recall_late": 0.5773116715163272,
+      "f1_late": 0.6753658132992932,
+      "roc_auc": 0.7562724482553007,
+      "confusion_matrix": [
+        [
+          17112,
+          3274
+        ],
+        [
+          10459,
+          14285
+        ]
+      ]
+    }
+  }
+}
