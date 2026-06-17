@@ -11,3 +11,5 @@ data/raw/
 data/processed/
 
 # Keep data/marts/ and dashboard/assets/dashboard_data.json tracked for portfolio reproducibility.
+
+.vercel
