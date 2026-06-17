@@ -187,14 +187,35 @@
     .rec{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
     .rec ul{margin:14px 0 0;padding-left:18px;color:var(--muted);line-height:1.75}
     .note{padding:18px 20px;margin-bottom:18px;color:#dbeafe;background:linear-gradient(135deg,rgba(125,211,252,.12),rgba(255,255,255,.035));border-radius:var(--radius-lg)}
+
+    .journal-shell{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:18px;align-items:start}
+    .journal-hero{padding:32px;min-height:320px;background:radial-gradient(circle at 80% 0%,rgba(243,181,98,.18),transparent 36%),linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.035))}
+    .journal-hero h3{font-size:clamp(32px,4vw,58px);line-height:.98;letter-spacing:-.055em;margin:18px 0 18px;text-wrap:balance}
+    .journal-hero p,.journal-card p,.journal-card li{color:var(--muted);line-height:1.75}
+    .journal-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:22px}
+    .journal-meta div{border:1px solid var(--line);border-radius:18px;padding:14px;background:rgba(255,255,255,.04)}
+    .journal-meta span{display:block;color:var(--quiet);font-family:"Fira Code",monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}
+    .journal-meta strong{font-family:"Fira Code",monospace;font-size:20px;color:var(--ink)}
+    .journal-stack{display:grid;gap:18px}
+    .journal-card{padding:26px;border-radius:var(--radius-lg)}
+    .journal-card h3{font-size:22px;margin:0 0 14px;letter-spacing:-.025em}
+    .journal-card h4{font-size:16px;margin:22px 0 8px;color:#dbeafe}
+    .journal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:12px}
+    .journal-chip{border:1px solid var(--line);border-radius:18px;padding:16px;background:rgba(255,255,255,.035)}
+    .journal-chip span{display:block;font-family:"Fira Code",monospace;color:var(--amber);font-size:12px;margin-bottom:6px}
+    .metric-list{display:grid;gap:10px;margin:14px 0 0;padding:0;list-style:none}
+    .metric-list li{border-left:2px solid rgba(243,181,98,.45);padding:6px 0 6px 12px}
+    .model-compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:14px}
+    .model-compare div{border:1px solid var(--line);border-radius:18px;padding:16px;background:rgba(255,255,255,.035)}
+    .model-compare strong{display:block;color:var(--ink);margin-bottom:10px}
     .footer{margin:20px 0 0;color:var(--quiet);font-size:12px;text-align:center}
     .loading{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:18px}
     .skeleton{height:112px;border-radius:var(--radius-lg);background:linear-gradient(90deg,rgba(255,255,255,.045),rgba(255,255,255,.11),rgba(255,255,255,.045));background-size:220% 100%;animation:shimmer 1.4s infinite}
     @keyframes shimmer{to{background-position:-220% 0}}
     @keyframes rise{from{opacity:0;transform:translateY(16px);filter:blur(6px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
     @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-    @media(max-width:1180px){.page{width:min(100% - 28px, 1500px)}.hero,.grid,.grid.three,.rec{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}.signal-strip{grid-template-columns:1fr 1fr}.topbar{align-items:flex-start;border-radius:28px;flex-direction:column}.nav{width:100%;padding-bottom:2px}}
-    @media(max-width:640px){.page{width:min(100% - 24px, 1500px);padding-top:12px}.topbar{position:relative;top:0}.hero{margin-top:18px}.hero-card,.summary{padding:26px;min-height:unset}.hero h2{font-size:40px;letter-spacing:-.055em}.summary strong{font-size:68px}.kpis,.signal-strip{grid-template-columns:1fr}.chart,.table-wrap{padding:18px;min-height:340px}}
+    @media(max-width:1180px){.page{width:min(100% - 28px, 1500px)}.hero,.grid,.grid.three,.rec,.journal-shell,.model-compare{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}.signal-strip{grid-template-columns:1fr 1fr}.topbar{align-items:flex-start;border-radius:28px;flex-direction:column}.nav{width:100%;padding-bottom:2px}}
+    @media(max-width:640px){.page{width:min(100% - 24px, 1500px);padding-top:12px}.topbar{position:relative;top:0}.hero{margin-top:18px}.hero-card,.summary,.journal-hero,.journal-card{padding:26px;min-height:unset}.hero h2{font-size:40px;letter-spacing:-.055em}.summary strong{font-size:68px}.kpis,.signal-strip,.journal-meta,.journal-grid{grid-template-columns:1fr}.chart,.table-wrap{padding:18px;min-height:340px}}
   </style>
 </head>
 <body>
@@ -212,6 +233,7 @@
         <button data-tab="customer">Customer region</button>
         <button data-tab="model">Model insights</button>
         <button data-tab="recs">Recommendations</button>
+        <button data-tab="journal">Jurnal Riset</button>
       </nav>
     </header>
 
@@ -282,6 +304,76 @@
       <section class="section" data-tab="recs">
         <div class="rec" id="recs"></div>
       </section>
+
+      <section class="section" data-tab="journal">
+        <div class="journal-shell">
+          <article class="journal-hero card">
+            <div class="badge">Jurnal penelitian Indonesia</div>
+            <h3>Supply Chain Risk Intelligence dari data mentah sampai dashboard.</h3>
+            <p>Bagian ini menjelaskan latar belakang, pipeline, model, interpretasi accuracy, isi dashboard, limitasi, dan pengembangan lanjutan dalam bahasa Indonesia.</p>
+            <div class="journal-meta">
+              <div><span>Dataset</span><strong>180.519 order</strong></div>
+              <div><span>Late risk</span><strong>54,83%</strong></div>
+              <div><span>Best model</span><strong>Random Forest</strong></div>
+              <div><span>Accuracy</span><strong>69,57%</strong></div>
+            </div>
+          </article>
+
+          <div class="journal-stack">
+            <article class="journal-card card">
+              <h3>1. Latar belakang dan tujuan</h3>
+              <p>Supply chain modern membutuhkan sinyal risiko sebelum masalah sampai ke pelanggan. Proyek ini dibuat untuk menjawab tiga kebutuhan utama: memahami keterlambatan pengiriman, melihat hubungan risiko dengan profitabilitas, dan membuat baseline model untuk memberi skor risiko order sebelum fulfillment selesai.</p>
+              <p>Dataset yang digunakan adalah DataCo Smart Supply Chain. Karena dataset bersifat publik dan historis, project ini diposisikan sebagai portfolio decision support prototype, bukan sistem produksi SLA.</p>
+            </article>
+
+            <article class="journal-card card">
+              <h3>2. Alur pembuatan project</h3>
+              <div class="journal-grid">
+                <div class="journal-chip"><span>Data preparation</span>Raw CSV dibersihkan, nama kolom distandardisasi, fitur tanggal dibuat, dan output publik dipisahkan dari data mentah.</div>
+                <div class="journal-chip"><span>KPI marts</span>Pipeline membuat delivery, profitability, region shipping, category, customer market, dan monthly trend marts.</div>
+                <div class="journal-chip"><span>Modeling</span>Logistic Regression dan Random Forest dibandingkan untuk prediksi late delivery risk tanpa post shipment leakage.</div>
+                <div class="journal-chip"><span>Dashboard</span>Data mart dan model output dikompilasi ke JSON agar dashboard bisa berjalan statis di Vercel.</div>
+              </div>
+            </article>
+
+            <article class="journal-card card">
+              <h3>3. Isi dashboard</h3>
+              <ul class="metric-list">
+                <li><strong>Overview:</strong> ringkasan order, sales, profit, late risk, model recall, distribusi delivery status, dan tren bulanan.</li>
+                <li><strong>Delivery Risk:</strong> late rate by shipping mode dan kombinasi region x shipping mode yang paling berisiko.</li>
+                <li><strong>Profitability:</strong> kategori, market, region, sales, margin, dan segmen high revenue namun low margin.</li>
+                <li><strong>Customer Region:</strong> performa customer segment berdasarkan market untuk melihat segmentasi risiko dan profit.</li>
+                <li><strong>Model Insights:</strong> feature importance, risk score sample, dan order dengan probability risk tinggi.</li>
+                <li><strong>Recommendations:</strong> rekomendasi untuk risk queue, monitoring fulfillment, dan evaluasi profit quality.</li>
+              </ul>
+            </article>
+
+            <article class="journal-card card">
+              <h3>4. Kenapa Random Forest dipilih</h3>
+              <p>Random Forest dipilih bukan karena accuracy tertinggi. Logistic Regression memiliki accuracy 70,02%, sedangkan Random Forest 69,57%. Tetapi tujuan bisnisnya adalah menangkap order yang berisiko telat. Karena itu model dipilih berdasarkan composite score: 50% recall late class, 30% F1 late class, dan 20% ROC-AUC.</p>
+              <div class="model-compare">
+                <div><strong>Logistic Regression</strong>Accuracy 70,02%<br>Precision late 82,96%<br>Recall late 57,02%<br>F1 67,59%<br>ROC-AUC 75,83%<br>Composite 63,9523%</div>
+                <div><strong>Random Forest</strong>Accuracy 69,57%<br>Precision late 81,35%<br>Recall late 57,73%<br>F1 67,54%<br>ROC-AUC 75,63%<br>Composite 64,2520%</div>
+              </div>
+              <p>Random Forest menang tipis karena recall late class lebih tinggi. Dalam supply chain, missed risky shipment biasanya lebih mahal daripada over-flagging order aman untuk monitoring.</p>
+            </article>
+
+            <article class="journal-card card">
+              <h3>5. Kenapa accuracy 69,57% masuk akal</h3>
+              <p>Model sengaja dibuat anti leakage. Field seperti actual shipping days, final delivery status, shipping gap, dan order status tidak dipakai karena baru diketahui setelah pengiriman terjadi. Jika field tersebut dipakai, accuracy bisa terlihat lebih tinggi, tetapi model tidak lagi realistis untuk prediksi sebelum fulfillment.</p>
+              <p>Accuracy juga dibatasi oleh karakter dataset publik. Faktor penting seperti cuaca, kapasitas gudang, kapasitas carrier, live inventory, jarak rute aktual, dan backlog harian tidak tersedia. Karena itu 69,57% dibaca sebagai baseline realistis, bukan angka final produksi.</p>
+            </article>
+
+            <article class="journal-card card">
+              <h3>6. Kesimpulan dan arah lanjutan</h3>
+              <p>Project ini menunjukkan proses end to end dari data engineering, EDA, machine learning, dashboard design, sampai deployment. Nilai utamanya ada pada cara dashboard dan model menjawab masalah bisnis secara jujur tanpa target leakage.</p>
+              <p>Pengembangan berikutnya dapat mencakup threshold tuning, PR-AUC, cost-sensitive evaluation, calibration curve, LightGBM atau XGBoost, serta integrasi data operasional seperti carrier capacity, warehouse backlog, route distance, cuaca, dan live inventory.</p>
+              <p>Versi lengkap jurnal penelitian tersedia di <a href="https://github.com/fityanhanif/supply-chain-risk-intelligence/blob/main/docs/research_journal_id.md" target="_blank" rel="noopener">docs/research_journal_id.md</a>.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <p class="footer">Static HTML + Chart.js. Data generated by Python pipeline.</p>
     </main>
   </div>

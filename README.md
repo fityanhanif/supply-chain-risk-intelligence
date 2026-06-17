@@ -126,6 +126,34 @@ Best model selected: **Random Forest**
 
 Business interpretation: the baseline model is useful for a portfolio-grade risk scoring prototype, but recall still needs improvement before production use. In supply chain operations, missed risky shipments are costly, so recall should be tuned further with thresholds, class weights, and operational feedback.
 
+
+## Jurnal penelitian dan interpretasi model
+
+Jurnal penelitian lengkap berbahasa Indonesia tersedia di [`docs/research_journal_id.md`](docs/research_journal_id.md). Ringkasan jurnal yang sama juga ditampilkan langsung di dashboard melalui menu **Jurnal Riset**.
+
+### Kenapa Random Forest dipilih
+
+Project ini membandingkan Logistic Regression dan Random Forest. Model final dipilih memakai composite score berbobot bisnis, bukan raw accuracy saja:
+
+- 50% recall untuk kelas late delivery
+- 30% F1 untuk kelas late delivery
+- 20% ROC-AUC
+
+Pembobotan ini mengikuti konteks supply chain. Gagal menangkap shipment yang berisiko telat biasanya lebih mahal daripada memasukkan order aman ke monitoring queue.
+
+Perbandingan model:
+
+- Logistic Regression: accuracy 70,02%, precision late 82,96%, recall late 57,02%, F1 67,59%, ROC-AUC 75,83%, composite 63,9523%
+- Random Forest: accuracy 69,57%, precision late 81,35%, recall late 57,73%, F1 67,54%, ROC-AUC 75,63%, composite 64,2520%
+
+Random Forest dipilih karena composite score paling tinggi dan recall untuk kelas late risk sedikit lebih baik.
+
+### Kenapa accuracy 69,57% masih masuk akal
+
+Model sengaja mengecualikan field post shipment seperti actual shipping days, final delivery status, shipping gap, dan order status. Keputusan ini membuat model tidak terlalu inflated, tetapi lebih realistis untuk scoring sebelum fulfillment selesai.
+
+Dengan kata lain, model tidak boleh memakai informasi yang baru diketahui setelah shipment terjadi. Accuracy 69,57% adalah baseline realistis untuk model anti leakage, bukan classifier historis yang bocor target. Pengembangan lanjutan yang paling relevan adalah threshold tuning, PR-AUC, cost-sensitive evaluation, calibration, serta penambahan data operasional seperti carrier capacity, warehouse backlog, route distance, cuaca, dan live inventory.
+
 ## Skills demonstrated
 
 ### Data Engineering
@@ -164,4 +192,4 @@ Local raw files:
 
 ## Author
 
-Fityan Hanif — Data Analyst / Data Scientist portfolio project.
+Fityan Hanif - Data Analyst / Data Scientist portfolio project.
