@@ -3,61 +3,244 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Supply chain risk intelligence dashboard for delivery risk, profitability, and leakage aware machine learning." />
   <title>Supply Chain Risk Intelligence</title>
   <link rel="icon" href="data:," />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Fira+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <style>
     :root{
-      --bg:#0b1020;--panel:#121a2e;--panel2:#17213a;--ink:#edf4ff;--muted:#8fa2c5;
-      --line:rgba(255,255,255,.09);--blue:#60a5fa;--green:#34d399;--amber:#fbbf24;--rose:#fb7185;--violet:#a78bfa;
+      --bg:#06080d;
+      --bg-soft:#0a0f18;
+      --panel:#101722;
+      --panel-strong:#141d2b;
+      --panel-warm:#17140f;
+      --ink:#f4f7fb;
+      --muted:#9aa8ba;
+      --quiet:#617083;
+      --line:rgba(226,232,240,.11);
+      --line-strong:rgba(226,232,240,.18);
+      --blue:#7dd3fc;
+      --green:#5eead4;
+      --amber:#f3b562;
+      --rose:#fb7185;
+      --violet:#c4b5fd;
+      --shadow:rgba(0,0,0,.38);
+      --radius-xl:30px;
+      --radius-lg:22px;
+      --radius-md:16px;
+      --ease:cubic-bezier(.16,1,.3,1);
     }
-    *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at top left,#172554 0,#0b1020 34%,#070a12 100%);color:var(--ink);font-family:Aptos,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif} a{color:var(--blue)}
-    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(circle at 35% 15%,#000,transparent 62%)}
-    .shell{display:grid;grid-template-columns:280px 1fr;min-height:100vh}.side{position:sticky;top:0;height:100vh;padding:28px 22px;background:rgba(8,13,25,.86);border-right:1px solid var(--line);backdrop-filter:blur(16px)}
-    .brand{font-size:13px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}.side h1{font-size:26px;line-height:1.05;margin:12px 0 12px}.side p{color:var(--muted);font-size:14px;line-height:1.55}.nav{display:grid;gap:8px;margin-top:26px}.nav button{border:1px solid transparent;background:transparent;color:var(--muted);text-align:left;border-radius:12px;padding:11px 12px;cursor:pointer;font-weight:650}.nav button.active,.nav button:hover{background:linear-gradient(90deg,rgba(96,165,250,.18),rgba(52,211,153,.08));border-color:var(--line);color:var(--ink)}
-    main{padding:32px;max-width:1500px;position:relative;z-index:1}.hero{display:grid;grid-template-columns:1.3fr .7fr;gap:18px;margin-bottom:22px}.card,.chart,.table-wrap,.insight{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:22px;box-shadow:0 22px 60px rgba(0,0,0,.18)}
-    .signal-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:-4px 0 18px;overflow:hidden}.signal-strip div{padding:16px 18px;border-right:1px solid var(--line)}.signal-strip div:last-child{border-right:0}.signal-strip span{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}.signal-strip strong{font-size:14px}.hero-card{padding:28px}.hero h2{font-size:42px;line-height:1;margin:0 0 12px}.hero p{color:var(--muted);line-height:1.7;margin:0}.badge{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:rgba(96,165,250,.09);color:#bfdbfe;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:800;margin-bottom:18px}.summary{padding:24px}.summary strong{font-size:36px;display:block}.summary span{color:var(--muted);font-size:13px}.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:24px}.kpi{padding:18px}.kpi .label{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.08em}.kpi .value{font-size:27px;font-weight:850;margin-top:8px}.kpi .sub{color:var(--muted);font-size:12px;margin-top:8px}.section{display:none}.section.active{display:block}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.grid.three{grid-template-columns:repeat(3,1fr)}.chart{padding:20px;min-height:360px}.chart h3,.table-wrap h3,.insight h3{margin:0 0 14px;font-size:17px}.chart canvas{width:100%!important;max-height:300px}.table-wrap{padding:20px;overflow:auto}.table{width:100%;border-collapse:collapse;font-size:13px}.table th,.table td{border-bottom:1px solid var(--line);padding:10px 8px;text-align:left;white-space:nowrap}.table th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em}.pill{border-radius:999px;padding:4px 8px;font-size:12px;font-weight:800}.High,.Critical{background:rgba(251,113,133,.16);color:#fecdd3}.Medium,.Strategic{background:rgba(251,191,36,.16);color:#fde68a}.Low,.HighImpact{background:rgba(52,211,153,.16);color:#bbf7d0}.ModelGovernance{background:rgba(167,139,250,.16);color:#ddd6fe}.insight{padding:20px}.insight p{color:var(--muted);line-height:1.55}.rec{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.rec ul{padding-left:18px;color:var(--muted);line-height:1.55}.footer{color:var(--muted);font-size:12px;margin-top:26px}.note{padding:16px;border:1px solid var(--line);border-radius:16px;background:rgba(251,191,36,.08);color:#fde68a;margin-bottom:18px}
-    @media(max-width:1100px){.shell{grid-template-columns:1fr}.side{position:relative;height:auto}.hero,.grid,.grid.three,.rec{grid-template-columns:1fr}.signal-strip{grid-template-columns:1fr 1fr}.kpis{grid-template-columns:repeat(2,1fr)}main{padding:20px}.hero h2{font-size:34px}}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      min-height:100dvh;
+      color:var(--ink);
+      font-family:"Fira Sans", ui-sans-serif, system-ui, sans-serif;
+      background:
+        radial-gradient(circle at 10% -10%, rgba(125,211,252,.20), transparent 32%),
+        radial-gradient(circle at 88% 12%, rgba(243,181,98,.16), transparent 34%),
+        linear-gradient(135deg, #05070b 0%, #080d15 45%, #0f0f0c 100%);
+      overflow-x:hidden;
+    }
+    body:before{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:0;
+      pointer-events:none;
+      opacity:.16;
+      background-image:
+        linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+      background-size:64px 64px;
+      mask-image:radial-gradient(circle at 42% 18%,#000,transparent 68%);
+    }
+    body:after{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:1;
+      pointer-events:none;
+      opacity:.055;
+      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+    }
+    a{color:var(--blue)}
+    button{font:inherit}
+    .skip-link{position:absolute;left:16px;top:-80px;z-index:20;background:var(--amber);color:#171006;padding:10px 14px;border-radius:999px;font-weight:800}
+    .skip-link:focus{top:16px;outline:3px solid rgba(255,255,255,.65)}
+    .page{position:relative;z-index:2;width:min(1500px, calc(100% - 40px));margin:0 auto;padding:24px 0 48px}
+    .topbar{
+      position:sticky;
+      top:16px;
+      z-index:10;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:10px 12px 10px 18px;
+      border:1px solid var(--line-strong);
+      border-radius:999px;
+      background:rgba(8,12,18,.76);
+      backdrop-filter:blur(18px) saturate(140%);
+      box-shadow:0 20px 70px var(--shadow), inset 0 1px 0 rgba(255,255,255,.08);
+    }
+    .brand-lockup{display:flex;align-items:center;gap:12px;min-width:max-content}
+    .mark{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--amber));color:#07100f;font-family:"Fira Code", monospace;font-size:13px;font-weight:800;box-shadow:0 0 34px rgba(125,211,252,.22)}
+    .brand{font-family:"Fira Code", monospace;font-size:11px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+    .brand strong{display:block;color:var(--ink);font-family:"Fira Sans", sans-serif;font-size:13px;letter-spacing:0;text-transform:none;margin-top:1px}
+    .nav{display:flex;align-items:center;gap:6px;overflow-x:auto;scrollbar-width:none}
+    .nav::-webkit-scrollbar{display:none}
+    .nav button{
+      border:0;
+      background:transparent;
+      color:var(--muted);
+      white-space:nowrap;
+      border-radius:999px;
+      padding:11px 14px;
+      cursor:pointer;
+      font-size:13px;
+      font-weight:700;
+      transition:transform .28s var(--ease), background .28s var(--ease), color .28s var(--ease), box-shadow .28s var(--ease);
+    }
+    .nav button:hover,.nav button.active{background:rgba(255,255,255,.08);color:var(--ink);box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+    .nav button:active{transform:scale(.98)}
+    .nav button:focus-visible{outline:3px solid rgba(125,211,252,.55);outline-offset:3px}
+    .hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(320px,.75fr);gap:18px;margin:34px 0 18px}
+    .card,.chart,.table-wrap,.insight,.signal-strip,.note{
+      position:relative;
+      border:1px solid var(--line);
+      border-radius:var(--radius-xl);
+      background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.035));
+      box-shadow:0 24px 80px var(--shadow), inset 0 1px 0 rgba(255,255,255,.07);
+      overflow:hidden;
+    }
+    .card:before,.chart:before,.table-wrap:before,.insight:before,.signal-strip:before{
+      content:"";
+      position:absolute;
+      inset:1px;
+      border-radius:calc(var(--radius-xl) - 2px);
+      pointer-events:none;
+      border:1px solid rgba(255,255,255,.045);
+    }
+    .hero-card{padding:42px;min-height:335px;display:flex;flex-direction:column;justify-content:space-between;background:
+      radial-gradient(circle at 82% 0%, rgba(125,211,252,.16), transparent 42%),
+      linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03));
+    }
+    .badge{
+      width:max-content;
+      display:inline-flex;
+      align-items:center;
+      border:1px solid rgba(243,181,98,.24);
+      background:rgba(243,181,98,.10);
+      color:#ffd49a;
+      border-radius:999px;
+      padding:8px 12px;
+      font-family:"Fira Code", monospace;
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:.02em;
+      margin-bottom:26px;
+    }
+    .hero h2{max-width:920px;font-size:clamp(42px, 6vw, 86px);line-height:.93;letter-spacing:-.07em;margin:0 0 20px;text-wrap:balance}
+    .hero p{max-width:66ch;color:var(--muted);line-height:1.75;margin:0;font-size:16px}
+    .summary{padding:28px;display:flex;flex-direction:column;justify-content:space-between;min-height:335px;background:
+      radial-gradient(circle at 20% 10%, rgba(243,181,98,.22), transparent 34%),
+      linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.025));
+    }
+    .summary span,.kpi .label,.signal-strip span{font-family:"Fira Code", monospace;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.11em}
+    .summary strong{display:block;font-family:"Fira Code", monospace;font-size:clamp(64px, 8vw, 112px);line-height:.9;letter-spacing:-.08em;color:var(--amber);font-weight:700}
+    .summary p{color:var(--muted);line-height:1.65;margin:18px 0 0}
+    .signal-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-bottom:18px;background:rgba(255,255,255,.045)}
+    .signal-strip div{padding:18px 20px;border-right:1px solid var(--line)}
+    .signal-strip div:last-child{border-right:0}
+    .signal-strip strong{display:block;font-size:15px;margin-top:8px;color:var(--ink);font-weight:700}
+    .kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-bottom:18px}
+    .kpi{padding:20px;border-radius:var(--radius-lg);transition:transform .32s var(--ease), border-color .32s var(--ease), background .32s var(--ease)}
+    .kpi:hover{transform:translateY(-3px);border-color:rgba(125,211,252,.28);background:linear-gradient(180deg,rgba(125,211,252,.09),rgba(255,255,255,.035))}
+    .kpi .value{font-family:"Fira Code", monospace;font-size:clamp(24px,2.2vw,34px);font-weight:700;margin-top:10px;font-variant-numeric:tabular-nums;letter-spacing:-.05em}
+    .kpi .sub{color:var(--quiet);font-size:12px;margin-top:8px;line-height:1.45}
+    .section{display:none;animation:rise .56s var(--ease) both}
+    .section.active{display:block}
+    .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
+    .grid.three{grid-template-columns:1.15fr .9fr 1.05fr;align-items:stretch}
+    .chart,.table-wrap{padding:22px;min-height:380px}
+    .chart:nth-child(2n){border-radius:var(--radius-lg)}
+    .chart h3,.table-wrap h3,.insight h3{margin:0 0 16px;font-size:18px;letter-spacing:-.02em;text-wrap:balance}
+    .chart canvas{width:100%!important;max-height:310px}
+    .table-wrap{overflow:auto}
+    .table{width:100%;border-collapse:collapse;font-size:13px}
+    .table th,.table td{border-bottom:1px solid var(--line);padding:12px 10px;text-align:left;white-space:nowrap}
+    .table th{color:var(--muted);font-family:"Fira Code", monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em}
+    .table td{color:#d8e0eb}
+    .pill{display:inline-flex;align-items:center;border-radius:999px;padding:5px 9px;font-family:"Fira Code", monospace;font-size:11px;font-weight:700}
+    .High,.Critical{background:rgba(251,113,133,.14);color:#fecdd3}
+    .Medium,.Strategic{background:rgba(243,181,98,.14);color:#fed7aa}
+    .Low,.HighImpact{background:rgba(94,234,212,.12);color:#99f6e4}
+    .insight{padding:24px;min-height:210px}
+    .insight p{color:var(--muted);line-height:1.65}
+    .insight strong{color:var(--ink);font-family:"Fira Code", monospace;font-weight:700}
+    .rec{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .rec ul{margin:14px 0 0;padding-left:18px;color:var(--muted);line-height:1.75}
+    .note{padding:18px 20px;margin-bottom:18px;color:#dbeafe;background:linear-gradient(135deg,rgba(125,211,252,.12),rgba(255,255,255,.035));border-radius:var(--radius-lg)}
+    .footer{margin:20px 0 0;color:var(--quiet);font-size:12px;text-align:center}
+    .loading{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:18px}
+    .skeleton{height:112px;border-radius:var(--radius-lg);background:linear-gradient(90deg,rgba(255,255,255,.045),rgba(255,255,255,.11),rgba(255,255,255,.045));background-size:220% 100%;animation:shimmer 1.4s infinite}
+    @keyframes shimmer{to{background-position:-220% 0}}
+    @keyframes rise{from{opacity:0;transform:translateY(16px);filter:blur(6px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+    @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+    @media(max-width:1180px){.page{width:min(100% - 28px, 1500px)}.hero,.grid,.grid.three,.rec{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}.signal-strip{grid-template-columns:1fr 1fr}.topbar{align-items:flex-start;border-radius:28px;flex-direction:column}.nav{width:100%;padding-bottom:2px}}
+    @media(max-width:640px){.page{width:min(100% - 24px, 1500px);padding-top:12px}.topbar{position:relative;top:0}.hero{margin-top:18px}.hero-card,.summary{padding:26px;min-height:unset}.hero h2{font-size:40px;letter-spacing:-.055em}.summary strong{font-size:68px}.kpis,.signal-strip{grid-template-columns:1fr}.chart,.table-wrap{padding:18px;min-height:340px}}
   </style>
 </head>
 <body>
-  <div class="shell">
-    <aside class="side">
-      <div class="brand">Portfolio Dashboard</div>
-      <h1>Supply Chain Risk Intelligence</h1>
-      <p>Delivery risk, profitability, and late-shipment prediction from 180K+ DataCo supply chain orders.</p>
-      <nav class="nav" id="nav">
-        <button class="active" data-tab="overview">Executive Overview</button>
-        <button data-tab="delivery">Delivery Risk</button>
+  <a class="skip-link" href="#main">Skip to dashboard</a>
+  <div class="page">
+    <header class="topbar" aria-label="Dashboard navigation">
+      <div class="brand-lockup">
+        <div class="mark" aria-hidden="true">SC</div>
+        <div class="brand">Portfolio dashboard<strong>Supply Chain Risk Intelligence</strong></div>
+      </div>
+      <nav class="nav" id="nav" aria-label="Dashboard sections">
+        <button class="active" data-tab="overview">Overview</button>
+        <button data-tab="delivery">Delivery risk</button>
         <button data-tab="profit">Profitability</button>
-        <button data-tab="customer">Customer & Region</button>
-        <button data-tab="model">Model Insights</button>
+        <button data-tab="customer">Customer region</button>
+        <button data-tab="model">Model insights</button>
         <button data-tab="recs">Recommendations</button>
       </nav>
-      <p class="footer">Static HTML + Chart.js. Data generated by Python pipeline.</p>
-    </aside>
-    <main>
-      <section class="hero">
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-label="Dashboard summary">
         <div class="hero-card card">
-          <div class="badge">Risk-based fulfillment analytics</div>
-          <h2>Find late delivery risk before it becomes a service problem.</h2>
-          <p>This dashboard connects shipment performance, market/category profitability, and a leakage-aware ML baseline into one executive view.</p>
+          <div>
+            <div class="badge">Risk based fulfillment analytics</div>
+            <h2>Find delivery risk before it becomes a service problem.</h2>
+          </div>
+          <p>Shipment performance, profitability, and a leakage aware model in one executive dashboard built from 180K+ DataCo orders.</p>
         </div>
         <div class="summary card">
           <span>Primary finding</span>
-          <strong id="heroLate">--</strong>
-          <p style="color:var(--muted);line-height:1.6">of historical orders are flagged as late delivery risk.</p>
+          <div>
+            <strong id="heroLate">--</strong>
+            <p>of historical orders are flagged as late delivery risk.</p>
+          </div>
         </div>
       </section>
 
-      <section class="signal-strip card" aria-label="Project quality signals">
+      <section class="signal-strip" aria-label="Project quality signals">
         <div><span>Dataset</span><strong>180K+ order records</strong></div>
         <div><span>Governance</span><strong>No post shipment leakage</strong></div>
         <div><span>Output</span><strong>Clean data, marts, model, dashboard</strong></div>
         <div><span>Use case</span><strong>Risk based fulfillment queue</strong></div>
       </section>
 
+      <div class="loading" id="loading" aria-label="Loading KPI cards"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></div>
       <div class="kpis" id="kpis"></div>
 
       <section class="section active" data-tab="overview">
@@ -78,7 +261,7 @@
       <section class="section" data-tab="profit">
         <div class="grid">
           <div class="chart"><h3>Top categories by sales</h3><canvas id="categoryChart"></canvas></div>
-          <div class="chart"><h3>High revenue / low margin segments</h3><canvas id="marginChart"></canvas></div>
+          <div class="chart"><h3>High revenue and low margin segments</h3><canvas id="marginChart"></canvas></div>
         </div>
         <div class="table-wrap" style="margin-top:18px"><h3>Profitability detail</h3><table class="table" id="profitTable"></table></div>
       </section>
@@ -88,17 +271,18 @@
       </section>
 
       <section class="section" data-tab="model">
-        <div class="note">The model excludes post-shipment leakage fields such as actual shipping days and final delivery status.</div>
+        <div class="note">The model excludes post shipment leakage fields such as actual shipping days and final delivery status.</div>
         <div class="grid">
           <div class="chart"><h3>Feature importance</h3><canvas id="featureChart"></canvas></div>
           <div class="chart"><h3>Risk score sample</h3><canvas id="scoreChart"></canvas></div>
         </div>
-        <div class="table-wrap" style="margin-top:18px"><h3>High-risk scored orders</h3><table class="table" id="scoreTable"></table></div>
+        <div class="table-wrap" style="margin-top:18px"><h3>High risk scored orders</h3><table class="table" id="scoreTable"></table></div>
       </section>
 
       <section class="section" data-tab="recs">
         <div class="rec" id="recs"></div>
       </section>
+      <p class="footer">Static HTML + Chart.js. Data generated by Python pipeline.</p>
     </main>
   </div>
 
@@ -146,6 +330,7 @@
         ['Late Risk', pct(k.late_delivery_rate), 'historical baseline'],
         ['Model Recall', pct(k.model_recall_late), `${data.kpis.best_model} late class`]
       ];
+      document.getElementById('loading').style.display = 'none';
       document.getElementById('kpis').innerHTML = kpiData.map(x => `<div class="kpi card"><div class="label">${x[0]}</div><div class="value">${x[1]}</div><div class="sub">${x[2]}</div></div>`).join('');
 
       const statusLabels = Object.keys(data.delivery_status);
