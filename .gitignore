@@ -5,4 +5,9 @@ venv/
 .env
 .ipynb_checkpoints/
 models/*.joblib
-# Keep generated CSV/JSON for portfolio reproducibility unless repo size becomes a problem.
+
+# Large local source/output files are reproducible from the user's local dataset.
+data/raw/
+data/processed/
+
+# Keep data/marts/ and dashboard/assets/dashboard_data.json tracked for portfolio reproducibility.
