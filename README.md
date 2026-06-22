@@ -1,56 +1,84 @@
 # Supply Chain Risk Intelligence
 
-This project analyzes **180,519 supply chain orders** from the DataCo Smart Supply Chain dataset to identify delivery risk, profitability gaps, and operational bottlenecks. The current pipeline cleans raw order data, builds KPI marts, trains a late-delivery risk model, and exports dashboard-ready JSON.
+[![Live Dashboard](https://img.shields.io/badge/Live%20Dashboard-Vercel-111827?style=for-the-badge&logo=vercel)](https://supply-chain-risk-intelligence-two.vercel.app)
+[![Python](https://img.shields.io/badge/Python-Data%20Pipeline-3776AB?style=for-the-badge&logo=python&logoColor=white)](requirements.txt)
+[![Portfolio Project](https://img.shields.io/badge/Portfolio-Data%20Science%20%2B%20BI-f3b562?style=for-the-badge)](docs/methodology.md)
 
-## What this project answers
+An end-to-end data analytics and data science portfolio project that turns **180,519 DataCo supply chain orders** into a delivery-risk monitoring dashboard, profitability analysis, and leakage-aware late delivery prediction model.
+
+**Live dashboard:** https://supply-chain-risk-intelligence-two.vercel.app  
+**Dataset:** DataCo Smart Supply Chain for Big Data Analysis  
+**Project type:** Data Engineering, Data Analysis, Data Science, Business Intelligence
+
+## Executive summary
+
+Supply chain teams need to know which orders, shipping modes, regions, and customer segments create service-level risk before delays become customer problems. This project builds a reproducible Python workflow that cleans raw order data, creates KPI marts, trains a late-delivery risk model, and publishes an executive dashboard for delivery risk, profit quality, and operational recommendations.
+
+## Key results
+
+- **180,519 orders** analyzed from a public supply chain dataset.
+- **54.83% late-delivery risk rate** in historical orders.
+- **$36.78M sales proxy** and **$3.97M profit or benefit proxy** profiled across market, region, category, and customer segment.
+- **Random Forest selected** using a business-weighted score focused on late-class recall, F1, and ROC-AUC.
+- **57.73% recall for late-risk class** with post-shipment leakage fields excluded.
+- Static dashboard deployed on Vercel with prebuilt JSON assets, so the portfolio demo loads without a backend server.
+
+## What the project answers
 
 1. Which shipments are most likely to be late?
 2. Which shipping modes, markets, and regions create the highest delivery risk?
 3. Which product categories and customer segments drive sales and profit?
-4. Are there high-revenue segments with weak margins or high delay risk?
-5. Can late delivery risk be scored before fulfillment?
-6. What operational actions should be prioritized?
+4. Where do high-revenue segments show weak margins or high delay risk?
+5. Can late-delivery risk be scored before fulfillment is completed?
+6. What operational actions should be prioritized to improve service level and profit quality?
 
-## Key numbers from the dataset
+## Dashboard sections
 
-- Orders analyzed: **180,519**
-- Columns in raw order dataset: **53**
-- Late delivery risk orders: **98,977**
-- Late delivery risk rate: **54.83%**
-- Total sales: **$36.78M**
-- Total benefit/profit proxy: **$3.97M**
-- Largest shipping mode by raw order records: **Standard Class** with 107,752 records
-- Largest market by raw order records: **LATAM** with 51,594 records
+- **Overview:** orders, sales, profit, late risk, model recall, delivery status distribution, and monthly trend.
+- **Delivery Risk:** late rate by shipping mode and risky region x shipping mode combinations.
+- **Profitability:** category performance, high-revenue low-margin segments, margin, and late-risk comparison.
+- **Customer Region:** customer segment x market performance.
+- **Model Insights:** feature importance, risk score distribution, and high-risk scored orders.
+- **Recommendations:** operational actions for SLA review, routing, risk queue setup, and margin protection.
+- **Jurnal Riset:** Indonesian research journal embedded in the dashboard for recruiter-friendly explanation.
 
-## Project structure
+## Repository structure
 
 ```text
 supply-chain-risk-intelligence/
-├── BLUEPRINT.md
-├── README.md
-├── requirements.txt
-├── data/
-│   ├── raw/                  # original CSV files
-│   ├── processed/            # cleaned anonymized order data
-│   └── marts/                # KPI tables and model outputs
 ├── dashboard/
-│   ├── index.html
-│   └── assets/dashboard_data.json
+│   ├── index.html                         # Static Chart.js dashboard
+│   └── assets/dashboard_data.json          # Prebuilt dashboard data asset
+├── data/
+│   └── marts/                              # Tracked KPI and model-output marts
 ├── docs/
 │   ├── data_dictionary.md
 │   ├── methodology.md
-│   └── limitations.md
-├── models/
-│   └── late_delivery_risk_model.joblib
+│   ├── limitations.md
+│   └── research_journal_id.md
 ├── notebooks/
 │   └── 01_eda_supply_chain.ipynb
-└── scripts/
-    ├── prepare_data.py
-    ├── train_model.py
-    └── build_dashboard_data.py
+├── scripts/
+│   ├── prepare_data.py                     # Raw data cleaning and KPI mart generation
+│   ├── train_model.py                      # Leakage-aware model training
+│   └── build_dashboard_data.py             # Dashboard JSON builder
+├── index.html                              # Redirect to dashboard
+├── vercel.json                             # Static deployment routing
+└── requirements.txt
 ```
 
 ## Pipeline
+
+```mermaid
+flowchart LR
+    A[Raw DataCo CSV] --> B[Data Cleaning]
+    B --> C[KPI Marts]
+    C --> D[Late Delivery Model]
+    C --> E[Dashboard JSON]
+    D --> E
+    E --> F[Static Chart.js Dashboard]
+    F --> G[Vercel Deployment]
+```
 
 ### 1. Prepare data and KPI marts
 
@@ -69,7 +97,7 @@ Outputs:
 - `data/marts/monthly_delivery_trend.csv`
 - `data/marts/data_profile.json`
 
-### 2. Train late-delivery model
+### 2. Train the late-delivery risk model
 
 ```bash
 python scripts/train_model.py
@@ -82,7 +110,7 @@ Outputs:
 - `data/marts/feature_importance.csv`
 - `data/marts/model_scoring_sample.csv`
 
-The model is built as an **operational prediction model**, so post-shipment leakage fields are excluded:
+The model is designed as an operational risk-scoring prototype. It excludes post-shipment leakage fields that would not be known at the time of pre-fulfillment scoring:
 
 - `Delivery Status`
 - `Days for shipping (real)`
@@ -90,7 +118,7 @@ The model is built as an **operational prediction model**, so post-shipment leak
 - `shipping date (DateOrders)`
 - `Order Status`
 
-### 3. Build dashboard JSON
+### 3. Build dashboard data
 
 ```bash
 python scripts/build_dashboard_data.py
@@ -100,7 +128,7 @@ Output:
 
 - `dashboard/assets/dashboard_data.json`
 
-### 4. Run dashboard locally
+### 4. Run locally
 
 ```bash
 python -m http.server 8000 -d dashboard
@@ -116,7 +144,7 @@ http://localhost:8000
 
 Two baseline models are trained and compared with business priority on late-class recall.
 
-Best model selected: **Random Forest**
+**Best model selected:** Random Forest
 
 - Accuracy: **69.57%**
 - Precision for late-risk class: **81.35%**
@@ -124,72 +152,76 @@ Best model selected: **Random Forest**
 - F1 for late-risk class: **67.54%**
 - ROC-AUC: **75.63%**
 
-Business interpretation: the baseline model is useful for a portfolio-grade risk scoring prototype, but recall still needs improvement before production use. In supply chain operations, missed risky shipments are costly, so recall should be tuned further with thresholds, class weights, and operational feedback.
+Random Forest is selected because it has the best business-weighted composite score, not because it has the highest raw accuracy. The scoring logic gives the largest weight to late-class recall because missed risky shipments are more expensive than sending some safe orders into a monitoring queue.
 
+## Business interpretation
 
-## Jurnal penelitian dan interpretasi model
-
-Jurnal penelitian lengkap berbahasa Indonesia tersedia di [`docs/research_journal_id.md`](docs/research_journal_id.md). Ringkasan jurnal yang sama juga ditampilkan langsung di dashboard melalui menu **Jurnal Riset**.
-
-### Kenapa Random Forest dipilih
-
-Project ini membandingkan Logistic Regression dan Random Forest. Model final dipilih memakai composite score berbobot bisnis, bukan raw accuracy saja:
-
-- 50% recall untuk kelas late delivery
-- 30% F1 untuk kelas late delivery
-- 20% ROC-AUC
-
-Pembobotan ini mengikuti konteks supply chain. Gagal menangkap shipment yang berisiko telat biasanya lebih mahal daripada memasukkan order aman ke monitoring queue.
-
-Perbandingan model:
-
-- Logistic Regression: accuracy 70,02%, precision late 82,96%, recall late 57,02%, F1 67,59%, ROC-AUC 75,83%, composite 63,9523%
-- Random Forest: accuracy 69,57%, precision late 81,35%, recall late 57,73%, F1 67,54%, ROC-AUC 75,63%, composite 64,2520%
-
-Random Forest dipilih karena composite score paling tinggi dan recall untuk kelas late risk sedikit lebih baik.
-
-### Kenapa accuracy 69,57% masih masuk akal
-
-Model sengaja mengecualikan field post shipment seperti actual shipping days, final delivery status, shipping gap, dan order status. Keputusan ini membuat model tidak terlalu inflated, tetapi lebih realistis untuk scoring sebelum fulfillment selesai.
-
-Dengan kata lain, model tidak boleh memakai informasi yang baru diketahui setelah shipment terjadi. Accuracy 69,57% adalah baseline realistis untuk model anti leakage, bukan classifier historis yang bocor target. Pengembangan lanjutan yang paling relevan adalah threshold tuning, PR-AUC, cost-sensitive evaluation, calibration, serta penambahan data operasional seperti carrier capacity, warehouse backlog, route distance, cuaca, dan live inventory.
+The model is useful as a portfolio-grade risk-scoring baseline, but it is not positioned as a production SLA engine. The result is intentionally conservative because the model avoids leakage from post-shipment fields. A realistic next iteration would tune thresholds, evaluate PR-AUC, calibrate probabilities, test cost-sensitive learning, and add operational features such as carrier capacity, warehouse backlog, route distance, weather, and live inventory.
 
 ## Skills demonstrated
 
 ### Data Engineering
 
-Built a reproducible Python pipeline that transforms raw CSV data into cleaned datasets, KPI marts, and dashboard-ready JSON. PII-like customer fields are removed from the processed dataset.
+- Raw CSV ingestion and cleaning
+- Column standardization and date parsing
+- PII-like field exclusion from public processed outputs
+- KPI mart generation for dashboard consumption
+- Static JSON asset build for deployment
 
 ### Data Analysis
 
-Analyzed delivery performance, shipping modes, markets, regions, categories, customer segments, profit, margin, and loss-making orders.
+- Delivery risk analysis by shipping mode, market, and region
+- Category and customer-segment profitability analysis
+- High-revenue low-margin segment detection
+- Monthly delivery trend analysis
 
 ### Data Science
 
-Trained baseline late-delivery classification models with leakage-aware feature selection, model evaluation, feature importance, and risk-level scoring.
+- Leakage-aware feature selection
+- Baseline model comparison
+- Feature importance analysis
+- Risk probability scoring and bucketization
+- Model interpretation tied to operational use cases
 
 ### Business Intelligence
 
-Designed the project around executive KPIs, delivery risk monitoring, profitability segmentation, model insights, and action-oriented recommendations.
+- Executive KPI dashboard
+- Interactive Chart.js visualizations
+- Risk and profitability storytelling
+- Action-oriented recommendations
+- Indonesian research journal for accessible explanation
 
-## Data source
+## Data source and reproducibility note
 
 Dataset: **DataCo Smart Supply Chain for Big Data Analysis**
 
-Local raw files:
+Raw files are intentionally not tracked in this repository because they are large local source files. The repository keeps the dashboard-ready marts and JSON asset so reviewers can inspect the final outputs and run the static dashboard without rebuilding the full pipeline.
+
+Expected local raw files:
 
 - `data/raw/DataCoSupplyChainDataset.csv`
 - `data/raw/DescriptionDataCoSupplyChain.csv`
 - `data/raw/tokenized_access_logs.csv`
 
+## Documentation
+
+- [Methodology](docs/methodology.md)
+- [Data dictionary](docs/data_dictionary.md)
+- [Limitations](docs/limitations.md)
+- [Research journal in Indonesian](docs/research_journal_id.md)
+- [CV and portfolio summary](docs/cv_portfolio_summary.md)
+- [Release notes](RELEASE_NOTES.md)
+
 ## Limitations
 
 - The dataset is public and historical, not connected to a live supply chain system.
-- Some fields can create target leakage if used incorrectly. The operational model excludes post-shipment fields, but historical diagnostic analysis can still use them.
+- Some fields can create target leakage if used incorrectly. The operational model excludes post-shipment fields.
 - The model is a portfolio-grade decision-support prototype, not a production SLA engine.
 - No real carrier capacity, warehouse capacity, weather, route distance, or live inventory data is included.
 - Financial fields are analyzed as provided by the dataset and may not represent audited company-level financials.
 
 ## Author
 
-Fityan Hanif - Data Analyst / Data Scientist portfolio project.
+**Fityan Hanif**  
+Data Analyst / Data Scientist portfolio project  
+GitHub: [@fityanhanif](https://github.com/fityanhanif)
